@@ -9,6 +9,88 @@
     <link rel="stylesheet" href="css/responsivo.css">
 </head>
 <body>
+    <header>
+        <img src="" alt="Logotipo da Loja de Natal The fan season" class="logo-header">
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="galeria.html">Galeria/Ofertas</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+    <main>
+
+
+        <section id="contato">
+
+            <div class="contato-container">
+                <div class="contato-item">
+                    <img src="" alt="logo do WhatsApp" class="icone-contato">
+                    <p>Fale conosco pelo WhatsApp!</p>
+                    <span>(18) 30303-1818</span>
+                </div>
+                <div class="contato-item">
+                    <img src="" alt="logo do Gmail" class="icone-contato">
+                    <p>Envie-nos um e-mail para atendimento e suporte na nossa ouvidoria.</p>
+                    <span>ouvidoria@thefanseason.com</span>
+                </div>
+                <div class="contato-item">
+                    <img src="" alt="logo do Instagram" class="icone-contato">
+                    <p>Nos siga no Instagram para ficar por dentro das novidades e promoções!</p>
+                    <span>@thefanseason_lojanatalina</span>
+                </div>
+                
+            </div>
+
+            <button id="btnAbrirModal" class="btn-contato">Entre em Contato</button>
+
+            <div id="modalContato" class="modal-container">
+                <div class="modal-conteudo">
+                    
+                    <span id="btnFecharModal" class="btn-fechar">&times;</span>
+                    
+                    <h2>Entre em Contato</h2>
+                    <p>Preencha os campos abaixo para nos enviar uma mensagem:</p>
+
+                    <form id="formContatoModal" class="form-modal">
+                        <div class="campo">
+                            <label for="modalNome">Nome</label>
+                            <input type="text" id="modalNome" required placeholder="Seu nome">
+                        </div>
+
+                        <div class="campo">
+                            <label for="modalEmail">E-mail</label>
+                            <input type="email" id="modalEmail" required placeholder="Seu e-mail">
+                        </div>
+
+                        <div class="campo">
+                            <label for="modalAssunto">Assunto</label>
+                            <select id="modalAssunto" required>
+                                <option value="" disabled selected>Selecione um assunto...</option>
+                                <option value="duvida">Dúvida sobre produto</option>
+                                <option value="entrega">Prazo de entrega</option>
+                                <option value="troca">Troca ou Devolução</option>
+                                <option value="outro">Outro (digitar)</option>
+                            </select>
+                        </div>
+
+                        <div class="campo" id="campoOutroAssunto" style="display: none;">
+                            <label for="modalOutroInput">Qual o assunto?</label>
+                            <input type="text" id="modalOutroInput" placeholder="Digite o assunto">
+                        </div>
+
+                        <div class="campo">
+                            <label for="modalMensagem">Mensagem</label>
+                            <textarea id="modalMensagem" rows="3" required placeholder="Sua mensagem..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
     
 
 
@@ -32,7 +114,7 @@
 
 
 
-
+    </main>
     <footer>
         <div class="container-footer">
             <div class="footer-img">

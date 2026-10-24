@@ -1,36 +1,36 @@
 const produtos = [
     {
         id: 1,
-        nome: "",
-        categoria: "",
-        preco: 0.00,
+        nome: "Snow globe - Lover",
+        categoria: ["Taylor swift", "decoração"],
+        preco: 85.90,
         imagem: "",
-        descricao: "",
+        descricao: "Caixinha de música em formato de globo de neve, que toca a música 'Lover'. Ideal para decoração e presente.",
         destaque: false
     },
     {
         id: 2,
-        nome: "",
-        categoria: "",
-        preco: 0.00,
+        nome: "Snow globe - Álbum 'The Tortured Poets Department'",
+        categoria: ["Taylor swift", "decoração"],
+        preco: 95.90,
         imagem: "",
-        descricao: "",
+        descricao: "Caixinha de música em formato de globo de neve, que toca a música 'Fortnight'. Ideal para decoração e presente.",
         destaque: false
     },
     {
         id: 3,
-        nome: "",
-        categoria: "",
-        preco: 0.00,
+        nome: "Snow globe - The Eras Tour",
+        categoria: ["Taylor swift", "decoração"],
+        preco: 85.90,
         imagem: "",
-        descricao: "",
+        descricao: "Caixinha de música em formato de globo de neve, com o tema 'The Eras Tour'. Toca a música 'You're On Your Own, Kid'. Perfeito para fãs de Taylor Swift, adicionando um toque mágico à decoração.",
         destaque: false
     },
     {
         id: 4,
         nome: "",
-        categoria: "",
-        preco: 0.00,
+        categoria: ["Taylor swift", "decoração"],
+        preco: 95.90,
         imagem: "",
         descricao: "",
         destaque: false
