@@ -9,19 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
 // 1. Efeito Paralax
 // ==========================================
 function EfeitoParalax() {
-    const dubaiText = document.getElementById('dubaitext');
-    const burjkhalifa = document.getElementById('burjkhalifa');
-    const building = document.getElementById('building');
-    const stars = document.getElementById('stars');
+    const titulo = document.getElementById('titulo');
+    const cidade = document.getElementById('cidade');
+    const arvore = document.getElementById('arvore');
+    const estrelas = document.getElementById('estrelas');
     let ticking = false;
 
     function updateParallax() {
         const value = window.scrollY;
         
-        dubaiText.style.transform = `translateX(${value * 2}px)`;
-        burjkhalifa.style.transform = `translateY(${value * 0.8}px)`;
-        building.style.transform = `translateY(${value * 0.5}px)`;
-        stars.style.transform = `translateY(${value * 0.2}px)`;
+        titulo.style.transform = `translateX(${value * 2}px)`;
+        cidade.style.transform = `translateY(${value * 0.8}px)`;
+        arvore.style.transform = `translateY(${value * 0.5}px)`;
+        estrelas.style.transform = `translateY(${value * 0.2}px)`;
         
         ticking = false;
     }
