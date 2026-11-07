@@ -4,6 +4,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     efeitoParalax();
     abrirModal();
+    mostrarCampoOutroAssunto();
 });
 
 // ==========================================
@@ -20,8 +21,8 @@ function efeitoParalax() {
         const value = window.scrollY;
         
         titulo.style.transform = `translateX(${value * 2}px)`;
-        cidade.style.transform = `translateY(${value * 0.8}px)`;
         arvore.style.transform = `translateY(${value * 0.5}px)`;
+        cidade.style.transform = `translateY(${value * 0.8}px)`;
         estrelas.style.transform = `translateY(${value * 0.2}px)`;
         
         ticking = false;
@@ -65,7 +66,9 @@ function abrirModal() {
     modal.classList.remove('ativo'); 
     });
 }
-
+ // ==========================================
+// 3. Mostrar campo "Outro Assunto" no formulário de contato
+// ==========================================
 function mostrarCampoOutroAssunto() {
     const selectAssunto = document.getElementById('modalAssunto');
     const campoOutro = document.getElementById('campoOutroAssunto');
