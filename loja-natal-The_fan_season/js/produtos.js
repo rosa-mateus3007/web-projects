@@ -4,7 +4,7 @@ const produtos = [
         nome: "Snow globe - Lover",
         categoria: ["Taylor swift", "decoração"],
         preco: 85.90,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "Caixinha de música em formato de globo de neve, que toca a música 'Lover'. Ideal para decoração e presente.",
         destaque: false
     },
@@ -13,7 +13,7 @@ const produtos = [
         nome: "Snow globe - Álbum 'The Tortured Poets Department'",
         categoria: ["Taylor swift", "decoração"],
         preco: 95.90,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "Caixinha de música em formato de globo de neve, que toca a música 'Fortnight'. Ideal para decoração e presente.",
         destaque: false
     },
@@ -22,7 +22,7 @@ const produtos = [
         nome: "Snow globe - The Eras Tour",
         categoria: ["Taylor swift", "decoração"],
         preco: 85.90,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "Caixinha de música em formato de globo de neve, com o tema 'The Eras Tour'. Toca a música 'You're On Your Own, Kid'. Perfeito para fãs de Taylor Swift, adicionando um toque mágico à decoração.",
         destaque: false
     },
@@ -31,7 +31,7 @@ const produtos = [
         nome: "",
         categoria: ["Taylor swift", "decoração"],
         preco: 95.90,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -40,7 +40,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -49,7 +49,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -58,7 +58,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -67,7 +67,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -76,7 +76,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -85,7 +85,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -94,7 +94,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -103,7 +103,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -112,7 +112,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -121,7 +121,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -130,7 +130,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -139,7 +139,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -148,7 +148,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -157,7 +157,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -166,7 +166,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -175,7 +175,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -184,7 +184,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -193,7 +193,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -202,7 +202,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00, 
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -211,7 +211,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -220,7 +220,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -229,7 +229,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -238,7 +238,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -247,7 +247,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -256,7 +256,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -265,7 +265,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -274,7 +274,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -283,7 +283,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -292,7 +292,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -301,7 +301,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -310,7 +310,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -319,7 +319,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -328,7 +328,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -337,7 +337,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -346,7 +346,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -355,7 +355,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -364,7 +364,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -373,7 +373,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -382,7 +382,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -391,7 +391,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -400,7 +400,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -409,7 +409,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -418,7 +418,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -427,7 +427,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -436,7 +436,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -445,7 +445,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },
@@ -454,7 +454,7 @@ const produtos = [
         nome: "",
         categoria: "",
         preco: 0.00,
-        imagem: "",
+        imagem: "img/produtos/",
         descricao: "",
         destaque: false
     },

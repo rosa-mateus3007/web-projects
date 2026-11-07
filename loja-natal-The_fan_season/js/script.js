@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 function efeitoParalax() {
     const titulo = document.getElementById('titulo');
-    const cidade = document.getElementById('cidade');
     const arvore = document.getElementById('arvore');
     const estrelas = document.getElementById('estrelas');
+    const cidade = document.getElementById('cidade');
     let ticking = false;
 
     function updateParallax() {
@@ -22,8 +22,8 @@ function efeitoParalax() {
         
         titulo.style.transform = `translateX(${value * 2}px)`;
         arvore.style.transform = `translateY(${value * 0.5}px)`;
-        cidade.style.transform = `translateY(${value * 0.8}px)`;
         estrelas.style.transform = `translateY(${value * 0.2}px)`;
+        cidade.style.transform = `translateY(${value * 0.8}px)`;
         
         ticking = false;
     }
@@ -66,7 +66,8 @@ function abrirModal() {
     modal.classList.remove('ativo'); 
     });
 }
- // ==========================================
+
+// ==========================================
 // 3. Mostrar campo "Outro Assunto" no formulário de contato
 // ==========================================
 function mostrarCampoOutroAssunto() {
