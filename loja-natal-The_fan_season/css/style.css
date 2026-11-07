@@ -62,3 +62,75 @@ body {
 #titulo {
     z-index: 4;
 }
+
+/* CABEÇALHO */
+header {
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 50px;
+
+    background-color: #101B35;
+
+    position: relative;
+    z-index: 10;
+}
+
+/* LOGOTIPO */
+.logo-header {
+    width: 150px;
+    height: auto;
+}
+
+/* MENU DESKTOP */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* LINKS DO MENU */
+.menu a {
+    color: #FFFFFF;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    position: relative;
+    transition: 0.3s;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.menu a:hover {
+    color: #D9B76E;
+}
+
+/* LINHA DOURADA ANIMADA */
+.menu a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #D9B76E;
+
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* BOTÃO HAMBÚRGUER */
+.menu-hamburguer {
+    display: none;
+}

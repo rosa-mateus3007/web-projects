@@ -1,0 +1,94 @@
+/* RESPONSIVIDADE DO MENU */
+@media screen and (max-width: 768px) {
+
+    /* CABEÇALHO */
+    header {
+        height: 80px;
+        padding: 0 20px;
+    }
+
+    /* LOGOTIPO */
+    .logo-header {
+        width: 120px;
+    }
+
+    /* BOTÃO HAMBÚRGUER */
+    .menu-hamburguer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+
+        width: 40px;
+        height: 40px;
+
+        background: transparent;
+        border: none;
+
+        cursor: pointer;
+    }
+
+    /* RISQUINHOS */
+    .menu-hamburguer span {
+        width: 28px;
+        height: 3px;
+
+        background-color: #D9B76E;
+        border-radius: 5px;
+
+        transition: 0.3s;
+    }
+
+    /* MENU FECHADO */
+    .menu {
+        position: absolute;
+        top: 80px;
+        right: 0;
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+
+        padding: 0;
+
+        background-color: #101B35;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-10px);
+        transition: 0.3s;
+    }
+
+    /* MENU ABERTO */
+    .menu.ativo {
+        opacity: 1;
+        visibility: visible;
+
+        transform: translateY(0);
+    }
+
+    /* LINKS */
+    .menu a {
+        width: 100%;
+        padding: 16px;
+
+        text-align: center;
+
+        border-top: 1px solid #263B60;
+    }
+
+    /* EFEITO DOS LINKS */
+    .menu a:hover {
+        background-color: #263B60;
+        color: #D9B76E;
+    }
+
+    .menu a::after {
+        display: none;
+    }
+}
