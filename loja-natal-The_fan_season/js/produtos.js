@@ -2,9 +2,9 @@ const produtos = [
     {
         id: 1,
         nome: "Snow globe - Lover",
-        categoria: ["Taylor swift", "decoração"],
+        categoria:  ["Taylor swift", "decoração"],
         preco: 85.90,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/Lover-snow-globe.jpeg",
         descricao: "Caixinha de música em formato de globo de neve, que toca a música 'Lover'. Ideal para decoração e presente.",
         destaque: false
     },
@@ -13,7 +13,7 @@ const produtos = [
         nome: "Snow globe - Álbum 'The Tortured Poets Department'",
         categoria: ["Taylor swift", "decoração"],
         preco: 95.90,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/TTPD-snow-globe.jpeg",
         descricao: "Caixinha de música em formato de globo de neve, que toca a música 'Fortnight'. Ideal para decoração e presente.",
         destaque: false
     },
@@ -22,50 +22,50 @@ const produtos = [
         nome: "Snow globe - The Eras Tour",
         categoria: ["Taylor swift", "decoração"],
         preco: 85.90,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/The-eras-tour-snow-globe.jpeg",
         descricao: "Caixinha de música em formato de globo de neve, com o tema 'The Eras Tour'. Toca a música 'You're On Your Own, Kid'. Perfeito para fãs de Taylor Swift, adicionando um toque mágico à decoração.",
         destaque: false
     },
     {
         id: 4,
-        nome: "",
+        nome: "Kit de biscoito folklore",
+        categoria: ["Taylor swift", "utensílios"],
+        preco: 119.99,
+        imagem: "img/produtos/Kit-de-biscoito-da-Taylor-Swift.jpeg",
+        descricao: "Kit de cozinha, (avental, luva, descansa panela e caixinha com cortadores em formato de cardigan e estrela) personalizado do álbum folklore, ideal para fãs de Taylor Swift que gostam de cozinhar e querem adicionar um toque especial à sua experiência culinária.",
+        destaque: false
+    },
+    {
+        id: 5,
+        nome: "Olivia Rodrigo – GUTS Christmas Stocking ",
+        categoria: ["Olivia Rodrigo", "decoração"],
+        preco: 50.80,
+        imagem: "img/produtos/",
+        descricao: "Meia natalina inspirada na estética de Olivia Rodrigo, com fundo branco translúcido e detalhes em preto, rosa e roxo. Ideal para fãs da cantora que desejam adicionar um toque de estilo e personalidade à decoração natalina.",
+        destaque: false
+    },
+    {
+        id: 5,
+        nome: "Christmas tree Farm",
         categoria: ["Taylor swift", "decoração"],
         preco: 95.90,
         imagem: "img/produtos/",
-        descricao: "",
-        destaque: false
-    },
-    {
-        id: 5,
-        nome: "",
-        categoria: "",
-        preco: 0.00,
-        imagem: "img/produtos/",
-        descricao: "",
-        destaque: false
-    },
-    {
-        id: 5,
-        nome: "",
-        categoria: "",
-        preco: 0.00,
-        imagem: "img/produtos/",
-        descricao: "",
+        descricao: "Caixinha de música em formato de globo de neve, que toca a música 'Christmas tree Farm'. Para decoração e presente.",
         destaque: false
     },
     {
         id: 6,
-        nome: "",
-        categoria: "",
-        preco: 0.00,
+        nome: "GUTS christmas stocking",
+        categoria: ["Olivia Rodrigo", "decoração"],
+        preco: 29.99,
         imagem: "img/produtos/",
-        descricao: "",
+        descricao: "Enfeite natalino inspirado na estética de Olivia Rodrigo, com detalhes em preto, rosa e roxo. Ideal para fãs da cantora que desejam adicionar um toque de estilo e personalidade à decoração natalina.",
         destaque: false
     },
     {
         id: 7,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -74,7 +74,7 @@ const produtos = [
     {
         id: 8,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -83,7 +83,7 @@ const produtos = [
     {
         id: 9,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -92,7 +92,7 @@ const produtos = [
     {
         id: 10,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -101,7 +101,7 @@ const produtos = [
     {
         id: 11,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -110,7 +110,7 @@ const produtos = [
     {
         id: 12,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -119,7 +119,7 @@ const produtos = [
     {
         id: 13,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -128,7 +128,7 @@ const produtos = [
     {
         id: 14,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -137,7 +137,7 @@ const produtos = [
     {
         id: 15,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -146,7 +146,7 @@ const produtos = [
     {
         id: 16,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -155,7 +155,7 @@ const produtos = [
     {
         id: 17,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -164,7 +164,7 @@ const produtos = [
     {
         id: 18,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -173,7 +173,7 @@ const produtos = [
     {
         id: 19,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -182,7 +182,7 @@ const produtos = [
     {
         id: 20,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -191,7 +191,7 @@ const produtos = [
     {
         id: 21,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -200,7 +200,7 @@ const produtos = [
     {
         id: 22,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00, 
         imagem: "img/produtos/",
         descricao: "",
@@ -209,7 +209,7 @@ const produtos = [
     {
         id: 23,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -218,7 +218,7 @@ const produtos = [
     {
         id: 24,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -227,7 +227,7 @@ const produtos = [
     {
         id: 25,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -236,7 +236,7 @@ const produtos = [
     {
         id: 26,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -245,7 +245,7 @@ const produtos = [
     {
         id: 27,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -254,7 +254,7 @@ const produtos = [
     {
         id: 28, 
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -263,7 +263,7 @@ const produtos = [
     {
         id: 29,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -272,7 +272,7 @@ const produtos = [
     {
         id: 30,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -281,7 +281,7 @@ const produtos = [
     {
         id: 31,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -290,7 +290,7 @@ const produtos = [
     {
         id: 32,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -299,7 +299,7 @@ const produtos = [
     {
         id: 33,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -308,7 +308,7 @@ const produtos = [
     {
         id: 34,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -317,7 +317,7 @@ const produtos = [
     {
         id: 35,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -326,7 +326,7 @@ const produtos = [
     {
         id: 36,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -335,7 +335,7 @@ const produtos = [
     {
         id: 37,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -344,7 +344,7 @@ const produtos = [
     {
         id: 38,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -353,7 +353,7 @@ const produtos = [
     {
         id: 39,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -362,7 +362,7 @@ const produtos = [
     {
         id: 40,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -371,7 +371,7 @@ const produtos = [
     {
         id: 41,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -380,7 +380,7 @@ const produtos = [
     {
         id: 42,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -389,7 +389,7 @@ const produtos = [
     {
         id: 43,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -398,7 +398,7 @@ const produtos = [
     {
         id: 44,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -407,7 +407,7 @@ const produtos = [
     {
         id: 45,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -416,7 +416,7 @@ const produtos = [
     {
         id: 46,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -425,7 +425,7 @@ const produtos = [
     {
         id: 47,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -434,7 +434,7 @@ const produtos = [
     {
         id: 48,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -443,7 +443,7 @@ const produtos = [
     {
         id: 49,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
@@ -452,7 +452,7 @@ const produtos = [
     {
         id: 50,
         nome: "",
-        categoria: "",
+        categoria: [" ", " "],
         preco: 0.00,
         imagem: "img/produtos/",
         descricao: "",
