@@ -2,15 +2,15 @@
 // PAINEL DE CONTROLE (Chamada das funções)
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
-    efeitoParalax();
+    efeitoParallax();
     abrirModal();
     mostrarCampoOutroAssunto();
 });
 
 // ==========================================
-// 1. Efeito Paralax
+// 1. Efeito Parallax
 // ==========================================
-function efeitoParalax() {
+function efeitoParallax() {
     const titulo = document.getElementById('titulo');
     const arvore = document.getElementById('arvore');
     const estrelas = document.getElementById('estrelas');
