@@ -134,3 +134,128 @@ header {
 .menu-hamburguer {
     display: none;
 }
+/* =========================
+   RODAPÉ - FOOTER
+========================= */
+
+footer {
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        #263B60,
+        #101B35
+    );
+
+    color: #FFFFFF;
+    padding: 50px 60px 20px;
+}
+
+/* CONTAINER PRINCIPAL */
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 40px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* LOGOTIPO */
+.footer-img {
+    flex: 1;
+}
+
+.logo-footer {
+    width: 160px;
+    height: auto;
+}
+
+/* COLUNAS */
+.footer-navegacao,
+.footer-atendimento,
+.footer-pagamento {
+    flex: 1;
+}
+
+/* TÍTULOS */
+.container-footer h4 {
+    color: #D9B76E;
+    font-size: 18px;
+    margin-bottom: 20px;
+
+    position: relative;
+}
+
+/* DETALHE ABAIXO DOS TÍTULOS */
+.container-footer h4::after {
+    content: "";
+
+    display: block;
+    width: 35px;
+    height: 2px;
+
+    background-color: #D9B76E;
+
+    margin-top: 8px;
+}
+
+/* LISTAS */
+.container-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* ITENS */
+.container-footer li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #E5E5E5;
+}
+
+/* LINKS */
+.container-footer a {
+    color: #E5E5E5;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+/* EFEITO DOS LINKS */
+.container-footer a:hover {
+    color: #D9B76E;
+}
+
+/* MÉTODOS DE PAGAMENTO */
+.metodos-pagamento span {
+    margin-right: 8px;
+    font-size: 17px;
+}
+
+/* SEGURANÇA */
+#seguranca {
+    margin-top: 20px;
+    color: #D9B76E;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* PARTE INFERIOR DO FOOTER */
+.footer-bottom {
+    border-top: 1px solid #D9B76E;
+
+    margin-top: 45px;
+    padding-top: 20px;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #D5D5D5;
+    margin-bottom: 10px;
+}
+
+.footer-bottom p:last-child {
+    color: #D9B76E;
+}

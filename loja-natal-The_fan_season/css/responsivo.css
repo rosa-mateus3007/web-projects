@@ -92,3 +92,54 @@
         display: none;
     }
 }
+/* =========================
+   FOOTER RESPONSIVO
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    footer {
+        padding: 35px 25px 20px;
+    }
+
+    .container-footer {
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+        gap: 35px;
+    }
+
+    .footer-img,
+    .footer-navegacao,
+    .footer-atendimento,
+    .footer-pagamento {
+        width: 100%;
+    }
+
+    .logo-footer {
+        width: 140px;
+    }
+
+    .container-footer h4 {
+        font-size: 17px;
+    }
+
+    .container-footer h4::after {
+        margin: 8px auto 0;
+    }
+
+    .container-footer li {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+}
