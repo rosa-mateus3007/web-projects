@@ -16,7 +16,7 @@ body {
 }
 
 /* SEÇÃO PARALLAX */
-.paralax {
+.parallax {
     position: relative;
     display: flex;
     justify-content: center;
@@ -28,7 +28,7 @@ body {
 }
 
 /* IMAGENS DO PARALLAX */
-.paralax img {
+.parallax img {
     position: absolute;
 
     top: 0;
