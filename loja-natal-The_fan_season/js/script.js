@@ -44,10 +44,16 @@ function efeitoParallax() {
 // 2. Efeito de abrir e fechar o modal do formulário de contato
 // ==========================================
 function abrirModal() {
+
+    
     const btnAbrir = document.querySelector('#btnAbrirModal');
     const btnFechar = document.querySelector('#btnFecharModal');
     const modal = document.querySelector('#modalContato');
     const formContato = document.querySelector('#formContatoModal');
+
+    // Se o botão NÃO existir na página, o código para aqui e vai embora
+    if (!btnAbrir) return;  
+
 
     btnAbrir.addEventListener('click', () => {
     modal.classList.add('ativo');
