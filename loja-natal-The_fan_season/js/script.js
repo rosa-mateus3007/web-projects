@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     efeitoParallax();
     abrirModal();
     mostrarCampoOutroAssunto();
+    efeitoNeve();
+    contadorRegressivo();
+
 });
 
 // ==========================================
@@ -86,4 +89,18 @@ function mostrarCampoOutroAssunto() {
             inputOutro.value = ''; 
         }
     });
+}
+
+// ==========================================
+// 4. Efeito de neve caindo na tela
+// ==========================================
+function efeitoNeve() {
+    
+}
+
+// ==========================================
+// 5. Contador de tempo regressivo para o Natal
+// ==========================================
+function contadorRegressivo() {
+
 }
