@@ -103,8 +103,26 @@ function mostrarCampoOutroAssunto() {
 // 4. Efeito de neve caindo na tela
 // ==========================================
 function efeitoNeve() {
+    const quantidadeFlocos = 50;
 
-    
+    for (let i = 0; i < quantidadeFlocos; i++) {
+        const floco = document.createElement('div');
+        floco.classList.add('floco-neve');
+
+        floco.style.left = Math.random() * window.innerWidth + 'px';
+
+        const tamanho = Math.random() * 5 + 2;
+        floco.style.width = tamanho + 'px';
+        floco.style.height = tamanho + 'px';
+
+        const duracao = Math.random() * 5 + 3;
+        
+        floco.style.animationDuration = duracao + 's';
+        floco.style.animationDelay = Math.random() * 5 + 's';
+        floco.style.opacity = Math.random();
+
+        document.body.appendChild(floco);
+    }
 }
 
 // ==========================================

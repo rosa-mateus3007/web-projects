@@ -132,6 +132,38 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/* =========================
+   NEVE
+========================= */
+
+/* Estilo dos flocos de neve */
+.floco-neve {
+    position: fixed;
+    top: -10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    pointer-events: none; 
+    z-index: 9999; /* Fica acima de tudo, mas sem bloquear nada */
+    animation-name: cairNeve;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Animação de queda de cima para baixo */
+@keyframes cairNeve {
+    0% {
+        transform: translateY(0px) translateX(0px);
+    }
+    50% {
+        transform: translateY(50vh) translateX(15px); 
+    }
+    100% {
+        transform: translateY(105vh) translateX(-15px);
+    }
+}
+
+
 /* CABEÇALHO */
 header {
     width: 100%;
