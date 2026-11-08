@@ -113,13 +113,15 @@ function efeitoNeve() {
 // 5. Contador de tempo regressivo para o Natal
 // ==========================================
 function contadorRegressivo() {
-    console.log("1. A função contadorRegressivo foi chamada!");
+
     // Verifica logo no início se o elemento "dias" existe na página atual
     const elementoDias = document.getElementById("dias");
+    
     if (!elementoDias) {
         console.log("Elemento dias NÃO encontrado!");
         return; // Se não estiver na página, para a execução aqui sem erro
     }
+
     function atualizarContador() {
         console.log("2. Rodando a atualização do tempo...");
         const agora = new Date();

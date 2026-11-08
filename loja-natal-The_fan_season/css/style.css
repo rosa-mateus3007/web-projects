@@ -84,7 +84,7 @@ body {
     flex-direction: column;
 
     border-radius: 15px;
-    border: 2px solid var(--cor-branco, #ffffff); 
+    border: 2px solid var(--cor-branco); 
     background-color: rgba(255, 255, 255, 0.1); /* Fundo translúcido*/ /*SARAH: não sei se tem que colocar esse na no root tambem, pq a genye so usa uma vez */
     backdrop-filter: blur(5px);
     padding: 20px;
@@ -111,7 +111,7 @@ body {
 
 .container-contador .contador .tempo .card {
     padding: 10px;
-    background-color: #101B35;
+    background-color: #101B35; /* SARAH: coloquei essa cor mas pode mudar ta? e de preferencia colocar no root */
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -119,7 +119,7 @@ body {
 
 .container-contador .contador .tempo .card h3 {
     font-size: 45px;
-    color: #D9B76E;
+    color: #D9B76E; /* SARAH: coloquei essa cor mas pode mudar ta? e de preferencia colocar no root */
     padding: 5px;
     min-width: 80px;
     font-weight: bold;
@@ -128,7 +128,7 @@ body {
 .container-contador .contador .tempo .card p {
     font-size: 16px;
     padding: 5px;
-    color: var(--cor-branco, #ffffff);
+    color: var(--cor-branco);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
