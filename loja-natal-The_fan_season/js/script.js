@@ -85,6 +85,9 @@ function mostrarCampoOutroAssunto() {
     const campoOutro = document.getElementById('campoOutroAssunto');
     const inputOutro = document.getElementById('modalOutroInput');
 
+    // Se o elemento principal NÃO existir na página atual, o código para aqui sem erro
+    if (!selectAssunto) return;
+
     selectAssunto.addEventListener('change', function() {
         if (this.value === 'outro') {
             campoOutro.style.display = 'block';
