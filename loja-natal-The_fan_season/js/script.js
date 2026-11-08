@@ -2,6 +2,7 @@
 // PAINEL DE CONTROLE (Chamada das funções)
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("✅ O Painel de Controle carregou com sucesso!");
     // Funções que rodam em todas as páginas sem problemas
     efeitoParallax();
     abrirModal();
