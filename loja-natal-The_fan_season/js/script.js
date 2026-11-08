@@ -2,7 +2,7 @@
 // PAINEL DE CONTROLE (Chamada das funções)
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("✅ O Painel de Controle carregou com sucesso!");
+    
     // Funções que rodam em todas as páginas sem problemas
     efeitoParallax();
     abrirModal();
@@ -45,7 +45,6 @@ function efeitoParallax() {
 // ==========================================
 function abrirModal() {
 
-    
     const btnAbrir = document.querySelector('#btnAbrirModal');
     const btnFechar = document.querySelector('#btnFecharModal');
     const modal = document.querySelector('#modalContato');
@@ -53,7 +52,6 @@ function abrirModal() {
 
     // Se o botão NÃO existir na página, o código para aqui e vai embora
     if (!btnAbrir) return;  
-
 
     btnAbrir.addEventListener('click', () => {
     modal.classList.add('ativo');
@@ -116,14 +114,12 @@ function contadorRegressivo() {
 
     // Verifica logo no início se o elemento "dias" existe na página atual
     const elementoDias = document.getElementById("dias");
-    
+
     if (!elementoDias) {
-        console.log("Elemento dias NÃO encontrado!");
         return; // Se não estiver na página, para a execução aqui sem erro
     }
 
     function atualizarContador() {
-        console.log("2. Rodando a atualização do tempo...");
         const agora = new Date();
         const anoAtual = agora.getFullYear();
         
@@ -134,7 +130,6 @@ function contadorRegressivo() {
         }
 
         const diferencaSegundos = (natal - agora) / 1000;
-        console.log("Segundos restantes:", diferencaSegundos);
 
         if (diferencaSegundos <= 0) {
             document.querySelector(".tempo").innerHTML = "<h3>É Natal na The Fan Season! 🎄✨</h3>";
