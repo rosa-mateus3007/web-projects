@@ -1,8 +1,14 @@
+:root {
+    --cor-branco: #FFFFFF;
+    --cor-cinza-claro: #cccccc;
+}
+
 /* CONFIGURAÇÃO GERAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
 }
 
 body {
@@ -63,6 +69,69 @@ body {
     z-index: 4;
 }
 
+/* =========================
+   CONTADOR REGRESSIVO
+========================= */
+.container-contador {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 15px;
+    border: 2px solid var(--cor-branco, #ffffff); 
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo translúcido*/ /*SARAH: não sei se tem que colocar esse na no root tambem, pq a genye so usa uma vez */
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    width: 90%;
+    max-width: 700px; 
+    z-index: 1;
+}
+
+.container-contador .contador h2 {
+    font-size: 32px;
+    color: #D9B76E;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.container-contador .contador .tempo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Permite que os cards quebrem linha se faltar espaço */
+}
+
+.container-contador .contador .tempo .card {
+    padding: 10px;
+    background-color: #101B35;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container-contador .contador .tempo .card h3 {
+    font-size: 45px;
+    color: #D9B76E;
+    padding: 5px;
+    min-width: 80px;
+    font-weight: bold;
+}
+
+.container-contador .contador .tempo .card p {
+    font-size: 16px;
+    padding: 5px;
+    color: var(--cor-branco, #ffffff);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 /* CABEÇALHO */
 header {
     width: 100%;

@@ -95,6 +95,7 @@ function mostrarCampoOutroAssunto() {
 // 4. Efeito de neve caindo na tela
 // ==========================================
 function efeitoNeve() {
+
     
 }
 
@@ -102,5 +103,37 @@ function efeitoNeve() {
 // 5. Contador de tempo regressivo para o Natal
 // ==========================================
 function contadorRegressivo() {
+    function atualizarContador() {
+        const agora = new Date();
+        const anoAtual = agora.getFullYear();
+        
+        let natal = new Date(anoAtual, 11, 25);
+
+        if (agora > natal) {
+            natal = new Date(anoAtual + 1, 11, 25);
+        }
+
+        const diferencaSegundos = (natal - agora) / 1000;
+
+        if (diferencaSegundos <= 0) {
+            document.querySelector(".tempo").innerHTML = "<h3>É Natal na The Fan Season! 🎄✨</h3>";
+            return;
+        }
+
+        // Cálculos matemáticos
+        const dias = Math.floor(diferencaSegundos / (3600 * 24));
+        const horas = Math.floor((diferencaSegundos / 3600) % 24);
+        const minutos = Math.floor((diferencaSegundos / 60) % 60);
+        const segundos = Math.floor(diferencaSegundos % 60);
+
+        // Atualiza os elementos no HTML
+        document.getElementById("dias").textContent = String(dias).padStart(2, "0");
+        document.getElementById("horas").textContent = String(horas).padStart(2, "0");
+        document.getElementById("minutos").textContent = String(minutos).padStart(2, "0");
+        document.getElementById("segundos").textContent = String(segundos).padStart(2, "0");
+        }
+
+        atualizarContador();
+        setInterval(atualizarContador, 1000);
 
 }
