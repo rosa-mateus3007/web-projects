@@ -2,12 +2,22 @@
 // PAINEL DE CONTROLE (Chamada das funções)
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
+    // Funções que rodam em todas as páginas sem problemas
     efeitoParallax();
-    abrirModal();
-    mostrarCampoOutroAssunto();
     efeitoNeve();
-    contadorRegressivo();
+    mostrarCampoOutroAssunto();
 
+    // Verificação para o Modal (só executa se o botão de abrir existir na página)
+    const btnAbrirModal = document.getElementById('btnAbrir');
+    if (btnAbrirModal) {
+        abrirModal();
+    }
+
+    // Verificação para o Contador (só executa se o elemento "dias" existir na página)
+    const elementoDias = document.getElementById('dias');
+    if (elementoDias) {
+        contadorRegressivo();
+    }
 });
 
 // ==========================================
