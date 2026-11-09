@@ -252,8 +252,56 @@ body {
     border-radius: 6px;
     font-family: inherit;
 }
+/* CAMPO OUTRO ASSUNTO */
+#campoOutroAssunto {
+    display: none;
+    margin-top: 5px;
+    animation: aparecer 0.3s ease;
+}
 
-/* Falta fazer o css do campo outro assunto */
+#campoOutroAssunto label {
+    display: block;
+    color: #D9B76E;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#modalOutroInput {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--azul-escuro);
+    color: #fff;
+    border: 1px solid var(--azul-claro);
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+#modalOutroInput:focus {
+    border-color:var(--dourado);
+    box-shadow: 0 0 6px rgba(217, 183, 110, 0.3);
+}
+
+#modalOutroInput::placeholder {
+    color: #8995AA;
+}
+
+/* ANIMAÇÃO */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .btn-enviar {
     margin-top: 20px;
