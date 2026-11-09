@@ -171,3 +171,10 @@ function contadorRegressivo() {
         setInterval(atualizarContador, 1000);
 
 }
+
+// ==========================================
+// 6. Gerador dos cards de produtos na página de produtos
+// ==========================================
+
+// FUNÇÕES AUXILIARES (Ficam fora do DOM)
+
