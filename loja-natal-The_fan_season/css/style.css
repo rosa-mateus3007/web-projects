@@ -1,6 +1,10 @@
 :root {
     --cor-branco: #FFFFFF;
     --cor-cinza-claro: #cccccc;
+    --azul-escuro: #101B35;
+    --azul-claro: #263B60;
+    --dourado: #D9B76E;
+    --cor-cinza: #D5D5D5;
 }
 
 /* CONFIGURAÇÃO GERAL */
@@ -14,8 +18,8 @@
 body {
     background: linear-gradient(
         to bottom,
-        #101B35,
-        #263B60
+        var(--azul-escuro),
+        var(--azul-claro)
     );
 
     font-family: Arial, sans-serif;
@@ -95,7 +99,7 @@ body {
 
 .container-contador .contador h2 {
     font-size: 32px;
-    color: #D9B76E;
+    color: var(--dourado);
     text-align: center;
     font-weight: 900;
     margin-bottom: 15px;
@@ -111,7 +115,7 @@ body {
 
 .container-contador .contador .tempo .card {
     padding: 10px;
-    background-color: #101B35; /* SARAH: coloquei essa cor mas pode mudar ta? e de preferencia colocar no root */
+    background-color: var(--azul-escuro); /* SARAH: coloquei essa cor mas pode mudar ta? e de preferencia colocar no root */
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -119,7 +123,7 @@ body {
 
 .container-contador .contador .tempo .card h3 {
     font-size: 45px;
-    color: #D9B76E; /* SARAH: coloquei essa cor mas pode mudar ta? e de preferencia colocar no root */
+    color: var(--dourado); /* SARAH: coloquei essa cor mas pode mudar ta? e de preferencia colocar no root */
     padding: 5px;
     min-width: 80px;
     font-weight: bold;
@@ -141,7 +145,7 @@ body {
 .floco-neve {
     position: fixed;
     top: -10px;
-    background-color: #ffffff;
+    background-color: var(--cor-branco);
     border-radius: 50%;
     pointer-events: none; 
     z-index: 9999; /* Fica acima de tudo, mas sem bloquear nada */
@@ -181,7 +185,7 @@ body {
 }
 
 .btn-contato:hover {
-    background-color: var(--verde-claro);
+    background-color: var(--azul-claro);
 }
 
 .modal-container {
@@ -222,12 +226,12 @@ body {
     right: 15px;
     font-size: 28px;
     font-weight: bold;
-    color: var(--verde-claro);
+    color: var(--azul-claro);
     cursor: pointer;
 }
 
 .btn-fechar:hover {
-      color: var(--verde-escuro);
+      color: var(--azul-escuro);
 }
 
 .form-modal .campo {
@@ -244,7 +248,7 @@ body {
 .form-modal input,
 .form-modal textarea {
     padding: 10px;
-    border: 1px solid var(--verde-principal);
+    border: 1px solid var(--azul-escuro);
     border-radius: 6px;
     font-family: inherit;
 }
@@ -255,8 +259,8 @@ body {
     margin-top: 20px;
     width: 100%;
     padding: 12px;
-    background-color:var(--verde-principal);
-    color: var(--branco);
+    background-color:var(--azul-claro);
+    color: var(--dourado);
     border: none;
     border-radius: 6px;
     font-weight: bold;
@@ -276,7 +280,7 @@ header {
 
     padding: 0 50px;
 
-    background-color: #101B35;
+    background-color: var(--azul-escuro);
 
     position: relative;
     z-index: 10;
@@ -297,7 +301,7 @@ header {
 
 /* LINKS DO MENU */
 .menu a {
-    color: #FFFFFF;
+    color: var(--cor-branco);
     text-decoration: none;
 
     font-size: 16px;
@@ -309,7 +313,7 @@ header {
 
 /* EFEITO AO PASSAR O MOUSE */
 .menu a:hover {
-    color: #D9B76E;
+    color: var(--dourado);
 }
 
 /* LINHA DOURADA ANIMADA */
@@ -323,7 +327,7 @@ header {
     width: 0;
     height: 2px;
 
-    background-color: #D9B76E;
+    background-color: var(--dourado);
 
     transition: 0.3s;
 }
@@ -344,11 +348,11 @@ footer {
     width: 100%;
     background: linear-gradient(
         to bottom,
-        #263B60,
-        #101B35
+        var(--azul-claro),
+        var(--azul-escuro)
     );
 
-    color: #FFFFFF;
+    color: var(--cor-branco);
     padding: 50px 60px 20px;
 }
 
@@ -382,7 +386,7 @@ footer {
 
 /* TÍTULOS */
 .container-footer h4 {
-    color: #D9B76E;
+    color: var(--dourado);
     font-size: 18px;
     margin-bottom: 20px;
 
@@ -397,7 +401,7 @@ footer {
     width: 35px;
     height: 2px;
 
-    background-color: #D9B76E;
+    background-color: var(--dourado);
 
     margin-top: 8px;
 }
@@ -412,12 +416,12 @@ footer {
 .container-footer li {
     margin-bottom: 12px;
     font-size: 14px;
-    color: #E5E5E5;
+    color: var(--cor-cinza);
 }
 
 /* LINKS */
 .container-footer a {
-    color: #E5E5E5;
+    color: var(--cor-cinza);
     text-decoration: none;
 
     transition: 0.3s;
@@ -425,7 +429,7 @@ footer {
 
 /* EFEITO DOS LINKS */
 .container-footer a:hover {
-    color: #D9B76E;
+    color: var(--dourado);
 }
 
 /* MÉTODOS DE PAGAMENTO */
@@ -437,14 +441,14 @@ footer {
 /* SEGURANÇA */
 #seguranca {
     margin-top: 20px;
-    color: #D9B76E;
+    color: var(--dourado);
     font-size: 14px;
     font-weight: bold;
 }
 
 /* PARTE INFERIOR DO FOOTER */
 .footer-bottom {
-    border-top: 1px solid #D9B76E;
+    border-top: 1px solid var(--dourado);
 
     margin-top: 45px;
     padding-top: 20px;
@@ -454,10 +458,10 @@ footer {
 
 .footer-bottom p {
     font-size: 13px;
-    color: #D5D5D5;
+    color: var(--cor-cinza);
     margin-bottom: 10px;
 }
 
 .footer-bottom p:last-child {
-    color: #D9B76E;
+    color: var(--dourado);
 }
