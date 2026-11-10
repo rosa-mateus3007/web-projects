@@ -1,12 +1,14 @@
 :root {
     --cor-branco: #FFFFFF;
     --cor-cinza-claro: #cccccc;
+    --cor-cinza: #D5D5D5;
+
     --azul-escuro: #101B35;
     --azul-claro: #263B60;
     --dourado: #D9B76E;
-    --cor-cinza: #D5D5D5;
-}
 
+    --fundo-transparente: rgba(255, 255, 255, 0.1);
+}
 /* CONFIGURAÇÃO GERAL */
 * {
     margin: 0;
@@ -76,11 +78,12 @@ body {
 /* =========================
    CONTADOR REGRESSIVO
 ========================= */
+/* =========================
+   CONTADOR REGRESSIVO
+========================= */
+
 .container-contador {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
 
     display: flex;
     justify-content: center;
@@ -88,13 +91,16 @@ body {
     flex-direction: column;
 
     border-radius: 15px;
-    border: 2px solid var(--cor-branco); 
-    background-color: rgba(255, 255, 255, 0.1); /* Fundo translúcido*/ /*SARAH: não sei se tem que colocar esse na no root tambem, pq a genye so usa uma vez */
+    border: 2px solid var(--cor-branco);
+
+    background-color: var(--fundo-transparente);
     backdrop-filter: blur(5px);
-    padding: 20px;
+
+    padding: 25px;
     width: 90%;
-    max-width: 700px; 
-    z-index: 1;
+    max-width: 700px;
+
+    margin: 40px auto;
 }
 
 .container-contador .contador h2 {
@@ -110,12 +116,12 @@ body {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    flex-wrap: wrap; /* Permite que os cards quebrem linha se faltar espaço */
+    flex-wrap: wrap;
 }
 
 .container-contador .contador .tempo .card {
     padding: 10px;
-    background-color: var(--azul-escuro); /* SARAH: coloquei essa cor mas pode mudar ta? e de preferencia colocar no root */
+    background-color: var(--azul-escuro);
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -123,7 +129,7 @@ body {
 
 .container-contador .contador .tempo .card h3 {
     font-size: 45px;
-    color: var(--dourado); /* SARAH: coloquei essa cor mas pode mudar ta? e de preferencia colocar no root */
+    color: var(--dourado);
     padding: 5px;
     min-width: 80px;
     font-weight: bold;
@@ -167,39 +173,43 @@ body {
     }
 }
 
+
 /* =========================
    MODAL DE CONTATO
 ========================= */
 
-/* MODAL */
+/* BOTÃO ABRIR */
 .btn-contato {
-    background-color: var(--verde-principal);
-    color: var(--branco);
+    background-color: var(--azul-claro);
+    color: var(--dourado);
     padding: 12px 24px;
     font-size: 16px;
     font-weight: bold;
-    border: none;
     border-radius: 25px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: 0.3s;
 }
 
 .btn-contato:hover {
-    background-color: var(--azul-claro);
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
 }
 
+/* FUNDO DO MODAL */
 .modal-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+
+    background-color: rgba(0, 0, 0, 0.7);
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     z-index: 1000;
-    
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -210,83 +220,132 @@ body {
     pointer-events: all;
 }
 
+/* CONTEÚDO */
 .modal-conteudo {
-    background-color: var(--branco);
+    background-color: var(--azul-escuro);
+    border: 1px solid var(--azul-claro);
     padding: 30px;
     border-radius: 12px;
+
     width: 90%;
     max-width: 450px;
+
     position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* TÍTULO */
+.modal-conteudo h2 {
+    color: var(--dourado);
+    margin-bottom: 10px;
+}
+
+/* DESCRIÇÃO */
+.modal-conteudo p {
+    color: var(--cor-cinza);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* BOTÃO FECHAR */
 .btn-fechar {
     position: absolute;
     top: 10px;
     right: 15px;
+
     font-size: 28px;
     font-weight: bold;
-    color: var(--azul-claro);
+
+    color: var(--dourado);
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn-fechar:hover {
-      color: var(--azul-escuro);
+    color: var(--cor-branco);
 }
 
+/* CAMPOS DO FORMULÁRIO */
 .form-modal .campo {
     display: flex;
     flex-direction: column;
     margin-top: 15px;
 }
 
+/* LABELS */
 .form-modal label {
+    color: var(--dourado);
     font-weight: bold;
-    margin-bottom: 5px;
+    font-size: 14px;
+    margin-bottom: 7px;
 }
 
+/* INPUTS, SELECT E TEXTAREA */
 .form-modal input,
+.form-modal select,
 .form-modal textarea {
-    padding: 10px;
-    border: 1px solid var(--azul-escuro);
+    width: 100%;
+    padding: 12px;
+
+    background-color: var(--azul-escuro);
+    color: var(--cor-branco);
+
+    border: 1px solid var(--azul-claro);
     border-radius: 6px;
+
     font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+    transition: 0.3s;
 }
-/* CAMPO OUTRO ASSUNTO */
+
+/* FOCO NOS CAMPOS */
+.form-modal input:focus,
+.form-modal select:focus,
+.form-modal textarea:focus {
+    border-color: var(--dourado);
+    box-shadow: 0 0 6px rgba(217, 183, 110, 0.2);
+}
+
+/* PLACEHOLDERS */
+.form-modal input::placeholder,
+.form-modal textarea::placeholder {
+    color: #8995AA;
+}
+
+/* OPÇÕES DO SELECT */
+.form-modal select option {
+    background-color: var(--azul-escuro);
+    color: var(--cor-branco);
+}
+
+/* OUTRO ASSUNTO */
 #campoOutroAssunto {
     display: none;
     margin-top: 5px;
     animation: aparecer 0.3s ease;
 }
 
-#campoOutroAssunto label {
-    display: block;
-    color: #D9B76E;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-#modalOutroInput {
+/* BOTÃO ENVIAR */
+.btn-enviar {
+    margin-top: 20px;
     width: 100%;
     padding: 12px;
-    background-color: var(--azul-escuro);
-    color: #fff;
-    border: 1px solid var(--azul-claro);
+
+    background-color: var(--azul-claro);
+    color: var(--dourado);
+
     border-radius: 6px;
-    outline: none;
-    font-size: 14px;
-    box-sizing: border-box;
+    font-weight: bold;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-#modalOutroInput:focus {
-    border-color:var(--dourado);
-    box-shadow: 0 0 6px rgba(217, 183, 110, 0.3);
-}
-
-#modalOutroInput::placeholder {
-    color: #8995AA;
+.btn-enviar:hover {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
 }
 
 /* ANIMAÇÃO */
