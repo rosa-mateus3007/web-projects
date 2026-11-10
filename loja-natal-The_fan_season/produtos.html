@@ -4,27 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - The fan season</title>
-    <link rel="icon" href="img/fanicons/Presente_Vermelho-favicon.png">
+    <link rel="icon" href="img/fanicons/presente_vermelho-favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsivo.css">
 </head>
 <body>
     <header>
-        <img src="" alt="Logotipo da Loja de Natal The fan season" class="logo-header">
+        <img src="img/logo.png" alt="Logotipo da Loja de Natal The fan season" class="logo-header">
         <nav class="menu">
             <a href="index.html">Home</a>
             <a href="produtos.html">Produtos</a>
             <a href="sobre.html">Sobre nós</a>
             <a href="galeria.html">Galeria/Ofertas</a>
             <a href="contato.html">Contato</a>
+
+            <button id="btnAbrirCarrinho" class="btn-icone-carrinho">🛒 Carrinho<span id="contador-carrinho">0</span></button>
         </nav>
     </header>
-    <main>
+    <main class="container-produtos">
 
-        <div class="busca-container">
-            <input type="text" id="campoBusca" placeholder="Pesquisar produtos...">
+        <div class="filtros-container">
+
+            <input type="text" id="busca" placeholder="Pesquisar produtos...">
+
+            <!--Seletor de Categorias-->
+            <select id="categoria">
+                <option value="todas">Todas as Categorias</option>
+                <option value="decoracao">Decoração</option>
+                <option value="roupas">Roupas</option>
+                <option value="utensilios">Utensílios</option>
+                <option value="enfeites">Enfeites</option>
+            </select>
         </div>
 
+        <p id="contador" class="contador-produtos"></p>
+
+        <!--JS vai gerar os cards-->
         <div id="lista-produtos" class="grid-produtos"></div>   
 
 
