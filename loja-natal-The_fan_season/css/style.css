@@ -78,40 +78,39 @@ body {
 /* =========================
    CONTADOR REGRESSIVO
 ========================= */
-/* =========================
-   CONTADOR REGRESSIVO
-========================= */
-
 .container-contador {
     position: relative;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 
-    border-radius: 15px;
-    border: 2px solid var(--cor-branco);
-
-    background-color: var(--fundo-transparente);
-    backdrop-filter: blur(5px);
-
-    padding: 25px;
     width: 90%;
-    max-width: 700px;
+    max-width: 750px;
 
     margin: 40px auto;
+    padding: 25px;
+
+    border: 1px solid var(--dourado);
+    border-radius: 15px;
+
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(5px);
 }
 
-.container-contador .contador h2 {
-    font-size: 32px;
+.contador {
+    width: 100%;
+}
+
+.contador h2 {
+    font-size: 28px;
     color: var(--dourado);
     text-align: center;
     font-weight: 900;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.container-contador .contador .tempo {
+.tempo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,29 +118,30 @@ body {
     flex-wrap: wrap;
 }
 
-.container-contador .contador .tempo .card {
+.tempo .card {
     padding: 10px;
     background-color: var(--azul-escuro);
+    border: 1px solid var(--azul-claro);
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.container-contador .contador .tempo .card h3 {
+.tempo .card h3 {
     font-size: 45px;
     color: var(--dourado);
     padding: 5px;
     min-width: 80px;
-    font-weight: bold;
 }
 
-.container-contador .contador .tempo .card p {
-    font-size: 16px;
+.tempo .card p {
+    font-size: 14px;
     padding: 5px;
     color: var(--cor-branco);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
 
 /* =========================
    NEVE
