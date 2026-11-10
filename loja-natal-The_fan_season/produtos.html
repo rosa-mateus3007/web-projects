@@ -38,6 +38,18 @@
         <!--Contador de produtos-->
         <p id="contador" class="contador-produtos"></p>
 
+        <!-- Seção do Carrinho de Compras -->
+        <div class="carrinho-container">
+            <h2>Seu Carrinho 🛒</h2>
+            <ul id="itens-carrinho">
+                <!-- O JS vai preencher os itens aqui dinamicamente -->
+            </ul>
+            <div class="carrinho-total">
+                <strong>Total: <span id="total-carrinho">R$ 0,00</span></strong>
+            </div>
+            <button class="btn-finalizar" onclick="alert('Compra finalizada com sucesso!')">Finalizar Compra</button>
+        </div>
+
         <!--JS vai gerar os cards-->
         <div id="lista-produtos" class="grid-produtos"></div>   
 
