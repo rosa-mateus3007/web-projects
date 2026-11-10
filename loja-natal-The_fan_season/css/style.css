@@ -226,7 +226,7 @@
 
 .contador-produtos {
     font-size: 0.9rem;
-    color: (var(--cor-cinza));
+    color: var(--cor-cinza);
     margin-bottom: 20px;
 }
 

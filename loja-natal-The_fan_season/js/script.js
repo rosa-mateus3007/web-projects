@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mostrarProdutos(produtos);
     }
     inicializarFiltros();
+    configurarBotoesComprar();
 });
 
 // ==========================================
@@ -32,9 +33,9 @@ function efeitoParallax() {
         const value = window.scrollY;
         
         titulo.style.transform = `translateY(${value * 2}px)`;
-        papai_noel.style.transform = `translateX(${value * 1.5}px)`;
+        papai_noel.style.transform = `translateX(${value * (-1.5)}px)`;
         lua.style.transform = `translateY(${value * 0.2}px)`;
-        cidade.style.transform = `translateY(${value * 0.8}px)`;
+        cidade.style.transform = `translateY(${value * 0.1}px)`;
         
         ticking = false;
     }
@@ -257,4 +258,82 @@ function inicializarFiltros() {
     if (typeof produtos !== 'undefined') {
         filtrar();
     }
+}
+
+// ==========================================
+// 8. Adicionar ao carrinho 
+// ==========================================
+
+// Array que vai armazenar os produtos adicionados ao carrinho
+let carrinho = [];
+
+// Função para adicionar um produto ao carrinho (recebe o ID do produto)
+function adicionarAoCarrinho(idProduto) {
+    // Procura o produto na lista global que veio do 'produtos.js'
+    const produtoEncontrado = produtos.find(p => p.id === idProduto);
+    
+    if (!produtoEncontrado) return;
+
+    // Verifica se o produto já está no carrinho
+    const itemExistente = carrinho.find(item => item.id === idProduto);
+
+    if (itemExistente) {
+        itemExistente.quantidade += 1;
+    } else {
+        // Adiciona o produto com quantidade 1
+        carrinho.push({ ...produtoEncontrado, quantidade: 1 });
+    }
+
+    // Atualiza a exibição do carrinho na tela
+    atualizarCarrinho();
+    
+    console.log("Carrinho atualizado:", carrinho);
+}
+
+// Função para atualizar a exibição do carrinho e o valor total
+function atualizarCarrinho() {
+    const listaCarrinhoHTML = document.getElementById("itens-carrinho");
+    const totalCarrinhoHTML = document.getElementById("total-carrinho");
+    
+    // Se a área do carrinho não existir na página atual, para aqui
+    if (!listaCarrinhoHTML) return;
+
+    listaCarrinhoHTML.innerHTML = "";
+    let totalGeral = 0;
+
+    carrinho.forEach(item => {
+        const subtotal = item.preco * item.quantidade;
+        totalGeral += subtotal;
+
+        const li = document.createElement("li");
+        li.innerHTML = `
+            <span>${item.nome} (x${item.quantidade})</span>
+            <span>${formatarPreco(subtotal)}</span>
+            <button onclick="removerDoCarrinho(${item.id})">❌</button>
+        `;
+        listaCarrinhoHTML.appendChild(li);
+    });
+
+    if (totalCarrinhoHTML) {
+        totalCarrinhoHTML.textContent = formatarPreco(totalGeral);
+    }
+}
+
+// Função para remover um item do carrinho
+function removerDoCarrinho(idProduto) {
+    carrinho = carrinho.filter(item => item.id !== idProduto);
+    atualizarCarrinho();
+}
+// Função para capturar cliques nos botões de compra da grade
+function configurarBotoesComprar() {
+    const areaProdutos = document.getElementById("lista-produtos");
+    if (!areaProdutos) return;
+
+    areaProdutos.addEventListener("click", (e) => {
+        if (e.target.classList.contains("btn-comprar")) {
+            // Pega o ID que está guardado no botão
+            const idProduto = Number(e.target.getAttribute("data-id"));
+            adicionarAoCarrinho(idProduto);
+        }
+    });
 }
