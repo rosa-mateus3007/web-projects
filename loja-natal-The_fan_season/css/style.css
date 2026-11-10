@@ -31,7 +31,9 @@
    }
 
 
-/* SEÇÃO PARALLAX */
+/* =========================
+   PARALLAX
+========================= */
 .parallax {
     position: relative;
     display: flex;
@@ -59,17 +61,17 @@
 }
 
 /* CAMADA 1 */
-#estrelas {
+#cidade {
     z-index: 1;
 }
 
 /* CAMADA 2 */
-#cidade {
+#lua {
     z-index: 2;
 }
 
 /* CAMADA 3 */
-#arvore {
+#papai_noel {
     z-index: 3;
 }
 
