@@ -76,8 +76,27 @@
 /* CAMADA 4 */
 #titulo {
     z-index: 4;
+} 
+/* =========================
+   BOAS-VINDAS
+========================= */
+/* BOAS-VINDAS */
+.messagem-boasvindas h1 {
+    font-family: Georgia, serif;
+    color: var(--dourado);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
+.messagem-boasvindas p {
+    font-family: Arial, sans-serif;
+    color: var(--cor-branco);
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+}
 /* =========================
    CONTADOR REGRESSIVO
 ========================= */
