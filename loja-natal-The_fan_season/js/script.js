@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mostrarCampoOutroAssunto();
     efeitoNeve();
     contadorRegressivo();
+    mostrarProdutos(produtos); 
 });
 
 // ==========================================
