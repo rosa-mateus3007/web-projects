@@ -16,11 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
 // 1. Efeito Parallax
 // ==========================================
 function efeitoParallax() {
+
+    const elementoParallax = document.querySelector('.parallax');
+    if (!elementoParallax) return;
+
     const titulo = document.getElementById('titulo');
     const arvore = document.getElementById('arvore');
     const estrelas = document.getElementById('estrelas');
     const cidade = document.getElementById('cidade');
     let ticking = false;
+
 
     function updateParallax() {
         const value = window.scrollY;
@@ -194,8 +199,6 @@ function criarCard(produto) {
 
 function mostrarProdutos(lista) {
     const area = document.getElementById("lista-produtos");
-    
-    // Verificação (Early Return) direto na função: se o elemento não existir, para aqui sem erro!
     if (!area) return;
 
     area.innerHTML = lista.map(criarCard).join("");
