@@ -18,12 +18,7 @@
 }
 
 body {
-    background: linear-gradient(
-        to bottom,
-        var(--azul-escuro),
-        var(--azul-claro)
-    );
-
+    background-color: #D5E1ED;
     font-family: Arial, sans-serif;
 }
 
@@ -37,8 +32,13 @@ body {
     height: 100vh;
     width: 100%;
     overflow: hidden;
-}
 
+    background: linear-gradient(
+        to bottom,
+        var(--azul-escuro),
+        var(--azul-claro)
+    );
+}
 /* IMAGENS DO PARALLAX */
 .parallax img {
     position: absolute;
