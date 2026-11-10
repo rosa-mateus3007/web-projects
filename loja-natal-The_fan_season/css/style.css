@@ -17,18 +17,19 @@
     border: none;
 }
 
-body {
+
+   body {
     background: linear-gradient(
         to bottom,
-        #101B35 0%,
-        #263B60 20%,
-        #506783 40%,
-        #8297AC 65%,
-        #B7C8D8 100%
+        #010832 0%,
+        #10234C 25%,
+        #294D7B 65%,
+        #52769D 100%
     );
 
     font-family: Arial, sans-serif;
-}
+   }
+
 
 /* SEÇÃO PARALLAX */
 .parallax {
@@ -40,7 +41,6 @@ body {
     height: 100vh;
     width: 100%;
     overflow: hidden;
-
 }
 /* IMAGENS DO PARALLAX */
 .parallax img {
@@ -81,43 +81,40 @@ body {
 /* =========================
    CONTADOR REGRESSIVO
 ========================= */
+/* =========================
+   CONTADOR REGRESSIVO
+========================= */
+
 .container-contador {
     position: relative;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
+    border-radius: 15px;
+    border: 2px solid var(--cor-branco);
+
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+
+    padding: 20px;
     width: 90%;
-    max-width: 750px;
+    max-width: 700px;
 
     margin: 40px auto;
-    padding: 25px;
-
- .container-contador {
-    background-color: rgba(255, 255, 255, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(8px);
 }
 
 .container-contador .contador h2 {
-    color: var(--azul-escuro);
-}
-}
-
-.contador {
-    width: 100%;
-}
-
-.contador h2 {
-    font-size: 28px;
+    font-size: 32px;
     color: var(--dourado);
     text-align: center;
     font-weight: 900;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.tempo {
+.container-contador .contador .tempo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,30 +122,29 @@ body {
     flex-wrap: wrap;
 }
 
-.tempo .card {
+.container-contador .contador .tempo .card {
     padding: 10px;
     background-color: var(--azul-escuro);
-    border: 1px solid var(--azul-claro);
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.tempo .card h3 {
+.container-contador .contador .tempo .card h3 {
     font-size: 45px;
     color: var(--dourado);
     padding: 5px;
     min-width: 80px;
+    font-weight: bold;
 }
 
-.tempo .card p {
-    font-size: 14px;
+.container-contador .contador .tempo .card p {
+    font-size: 16px;
     padding: 5px;
     color: var(--cor-branco);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 
 /* =========================
    NEVE
