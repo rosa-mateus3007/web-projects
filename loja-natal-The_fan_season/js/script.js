@@ -200,6 +200,7 @@ function criarCard(produto) {
 }
 
 function mostrarProdutos(lista) {
+    const area = document.getElementById("lista-produtos");
     area.innerHTML = lista.map(criarCard).join("");
 }
 
