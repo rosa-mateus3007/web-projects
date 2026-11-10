@@ -92,6 +92,24 @@
         display: none;
     }
 }
+@media (max-width: 768px) {
+
+    .membro-equipe {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .member-right {
+        flex-direction: column-reverse;
+    }
+
+    .membro-avatar {
+        width: 160px;
+        height: 160px;
+    }
+
+}
 /* =========================
    FOOTER RESPONSIVO
 ========================= */

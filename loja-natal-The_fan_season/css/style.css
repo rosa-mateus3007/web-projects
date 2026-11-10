@@ -666,3 +666,58 @@ footer {
     font-family: Arial, sans-serif;
     color: #FFFFFF;
 }
+/* FOTOS DOS INTEGRANTES */
+.membro-avatar {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #D9B76E;
+}
+
+.membro-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+/* TÍTULO DA EQUIPE */
+.apresentacao-da-equipe h2 {
+    font-family: Georgia, serif;
+    color: #D9B76E;
+    text-align: center;
+}
+
+/* CONTAINER DOS INTEGRANTES */
+.membro-equipe {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+/* NOMES */
+.membro-info h3 {
+    font-family: Georgia, serif;
+    color: #D9B76E;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* TEXTOS */
+.membro-info p {
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+/* DESTAQUE DE FUNÇÃO E SOBRE */
+.membro-info strong {
+    color: #D9B76E;
+}
