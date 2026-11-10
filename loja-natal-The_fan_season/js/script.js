@@ -195,7 +195,7 @@ function criarCard(produto) {
         <h3>${produto.nome}</h3>
         <p>${produto.descricao}</p>
         <strong>${formatarPreco(produto.preco)}</strong>
-        <button class="btn-comprar" data-id="${produto.id}">Adicionar ao carrinho</button>
+        <button class="btn-carrinho" data-id="${produto.id}">Adicionar ao carrinho</button>
     </article>`;
 }
 
@@ -309,7 +309,7 @@ function atualizarCarrinho() {
         li.innerHTML = `
             <span>${item.nome} (x${item.quantidade})</span>
             <span>${formatarPreco(subtotal)}</span>
-            <button onclick="removerDoCarrinho(${item.id})">❌</button>
+            <button onclick="removerDoCarrinho(${item.id})">&times;</button>
         `;
         listaCarrinhoHTML.appendChild(li);
     });
@@ -330,7 +330,7 @@ function configurarBotoesComprar() {
     if (!areaProdutos) return;
 
     areaProdutos.addEventListener("click", (e) => {
-        if (e.target.classList.contains("btn-comprar")) {
+        if (e.target.classList.contains("btn-carrinho")) {
             // Pega o ID que está guardado no botão
             const idProduto = Number(e.target.getAttribute("data-id"));
             adicionarAoCarrinho(idProduto);
