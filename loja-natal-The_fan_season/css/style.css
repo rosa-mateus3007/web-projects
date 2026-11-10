@@ -634,3 +634,35 @@ footer {
 .footer-bottom p:last-child {
     color: var(--dourado);
 }
+
+/* TÍTULO PRINCIPAL */
+#titulo-sobre-nos {
+    font-family: Georgia, serif;
+    color: #D9B76E;
+    text-align: center;
+}
+
+/* TÍTULO DA HISTÓRIA */
+.historia-section h3 {
+    font-family: Georgia, serif;
+    color: #D9B76E;
+}
+
+/* TÍTULO DA APRESENTAÇÃO DA EQUIPE */
+.apresentacao-da-equipe h2 {
+    font-family: Georgia, serif;
+    color: #D9B76E;
+}
+
+/* NOMES DOS INTEGRANTES */
+.membro-info h3 {
+    font-family: Georgia, serif;
+    color: #D9B76E;
+}
+
+/* TEXTOS E PARÁGRAFOS */
+.historia-sobre-nos p,
+.apresentacao-da-equipe p {
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+}
