@@ -30,6 +30,10 @@
     font-family: Arial, sans-serif;
    }
 
+.logo-header {
+    width: 120px; 
+    height: auto; 
+}
 
 /* =========================
    PARALLAX
