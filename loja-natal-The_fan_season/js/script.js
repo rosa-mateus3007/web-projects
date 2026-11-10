@@ -22,8 +22,8 @@ function efeitoParallax() {
     if (!elementoParallax) return;
 
     const titulo = document.getElementById('titulo');
-    const arvore = document.getElementById('arvore');
-    const estrelas = document.getElementById('estrelas');
+    const papai_noel = document.getElementById('papai_noel');
+    const lua = document.getElementById('lua');
     const cidade = document.getElementById('cidade');
     let ticking = false;
 
@@ -31,9 +31,9 @@ function efeitoParallax() {
     function updateParallax() {
         const value = window.scrollY;
         
-        titulo.style.transform = `translateX(${value * 2}px)`;
-        arvore.style.transform = `translateY(${value * 0.5}px)`;
-        estrelas.style.transform = `translateY(${value * 0.2}px)`;
+        titulo.style.transform = `translateY(${value * 2}px)`;
+        papai_noel.style.transform = `translateX(${value * 1.5}px)`;
+        lua.style.transform = `translateY(${value * 0.2}px)`;
         cidade.style.transform = `translateY(${value * 0.8}px)`;
         
         ticking = false;

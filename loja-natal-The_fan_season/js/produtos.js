@@ -35,15 +35,7 @@ const produtos = [
         descricao: "Kit de cozinha, (avental, luva, descansa panela e caixinha com cortadores em formato de cardigan e estrela) personalizado do álbum folklore, ideal para fãs de Taylor Swift que gostam de cozinhar e querem adicionar um toque especial à sua experiência culinária.",
         destaque: false
     },
-    {
-        id: 5,
-        nome: "Olivia Rodrigo – GUTS Christmas Stocking ",
-        categoria: ["Olivia Rodrigo", "decoracao"],
-        preco: 50.80,
-        imagem: "img/produtos/guts-olivia-rodrigo-christmas-stocking.jpeg",
-        descricao: "Meia natalina inspirada na estética de Olivia Rodrigo, com fundo branco translúcido e detalhes em preto. Ideal para fãs da cantora que desejam adicionar um toque de estilo e personalidade à decoração natalina.",
-        destaque: false
-    },
+    
     {
         id: 5,
         nome: "Christmas tree Farm",
@@ -145,11 +137,11 @@ const produtos = [
     },
     {
         id: 16,
-        nome: "",
-        categoria: [" ", " "],
-        preco: 0.00,
-        imagem: "img/produtos/",
-        descricao: "",
+        nome: "Olivia Rodrigo – GUTS Christmas Stocking ",
+        categoria: ["Olivia Rodrigo", "decoracao"],
+        preco: 50.80,
+        imagem: "img/produtos/guts-olivia-rodrigo-christmas-stocking.jpeg",
+        descricao: "Meia natalina inspirada na estética de Olivia Rodrigo, com fundo branco translúcido e detalhes em preto. Ideal para fãs da cantora que desejam adicionar um toque de estilo e personalidade à decoração natalina.",
         destaque: false
     },
     {
