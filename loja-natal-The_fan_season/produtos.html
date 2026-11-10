@@ -19,12 +19,26 @@
             <a href="contato.html">Contato</a>
         </nav>
     </header>
-    <main>
+    <main class="container-produtos">
 
-        <div class="busca-container">
-            <input type="text" id="campoBusca" placeholder="Pesquisar produtos...">
+        <div class="filtros-container">
+
+            <input type="text" id="busca" placeholder="Pesquisar produtos...">
+
+            <!--Seletor de Categorias-->
+            <select id="categoria">
+                <option value="todas">Todas as Categorias</option>
+                <option value="decoracao">Decoração</option>
+                <option value="roupas">Roupas</option>
+                <option value="utensilios">Utensílios</option>
+                <option value="enfeites">Enfeites</option>
+            </select>
         </div>
 
+        <!--Contador de produtos-->
+        <p id="contador" class="contador-produtos"></p>
+
+        <!--JS vai gerar os cards-->
         <div id="lista-produtos" class="grid-produtos"></div>   
 
 

@@ -2,8 +2,6 @@
 // PAINEL DE CONTROLE (Chamada das funções)
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Funções que rodam em todas as páginas sem problemas
     efeitoParallax();
     abrirModal();
     mostrarCampoOutroAssunto();
@@ -12,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof produtos !== 'undefined') {
         mostrarProdutos(produtos);
     }
+    inicializarFiltros();
 });
 
 // ==========================================
@@ -204,3 +203,58 @@ function mostrarProdutos(lista) {
     area.innerHTML = lista.map(criarCard).join("");
 }
 
+// ==========================================
+// 7. FILTRO E DE BUSCA DE PRODUTOS
+// ==========================================
+function inicializarFiltros() {
+    const campoBusca = document.getElementById("busca");
+    const seletorCategoria = document.getElementById("categoria");
+    const contador = document.getElementById("contador");
+
+    // Se os elementos de busca não existirem na página, para aqui
+    if (!campoBusca && !seletorCategoria) return;
+
+    function filtrar() {
+        // Pega o texto digitado e a categoria selecionada (se existirem)
+        const texto = campoBusca ? campoBusca.value.toLowerCase() : "";
+        const categoria = seletorCategoria ? seletorCategoria.value : "todas";
+
+        const resultado = produtos.filter(p => {
+            const combinaNome = p.nome.toLowerCase().includes(texto);
+            
+            // Verifica se a categoria bate (suportando se for string ou array)
+            let combinaCategoria = false;
+            if (categoria === "todas") {
+                combinaCategoria = true;
+            } else if (Array.isArray(p.categoria)) {
+                combinaCategoria = p.categoria.includes(categoria);
+            } else {
+                combinaCategoria = p.categoria === categoria;
+            }
+
+            return combinaNome && combinaCategoria;
+        });
+
+        // Atualiza os produtos na tela
+        mostrarProdutos(resultado);
+
+        // Atualiza o texto do contador (se o elemento existir no HTML)
+        if (contador) {
+            contador.textContent = `Mostrando ${resultado.length} de ${produtos.length} produtos`;
+        }
+    }
+
+    // Adiciona os escutadores de eventos se os elementos existirem
+    if (campoBusca) {
+        campoBusca.addEventListener("input", filtrar);
+    }
+    
+    if (seletorCategoria) {
+        seletorCategoria.addEventListener("change", filtrar);
+    }
+
+    // Executa uma vez no carregamento para mostrar tudo inicialmente
+    if (typeof produtos !== 'undefined') {
+        filtrar();
+    }
+}

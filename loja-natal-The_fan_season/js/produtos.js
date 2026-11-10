@@ -57,7 +57,7 @@ const produtos = [
         id: 6,
         nome: "GUTS christmas stocking",
         categoria: ["Olivia Rodrigo", "decoracao"],
-        preco: 29.99,
+        preco: 50.80,
         imagem: "img/produtos/guts-christmas-stocking.jpeg",
         descricao: "Enfeite natalino inspirado na estética de Olivia Rodrigo, com detalhes em estrelas roxo e vermelho. Ideal para fãs da cantora que desejam adicionar um toque de estilo e personalidade à decoração natalina.",
         destaque: false

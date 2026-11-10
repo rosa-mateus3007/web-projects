@@ -193,6 +193,40 @@
     }
 }
 
+/* =========================
+   PRODUTOS
+========================= */
+
+.container-produtos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Barra de busca */
+.filtros-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.filtros-container input,
+.filtros-container select {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid var(--azul-claro);
+    border-radius: 8px;
+    outline: none;
+    flex: 1;
+    min-width: 200px;
+}
+
+.contador-produtos {
+    font-size: 0.9rem;
+    color: (var(--cor-cinza));
+    margin-bottom: 20px;
+}
 
 /* =========================
    MODAL DE CONTATO
