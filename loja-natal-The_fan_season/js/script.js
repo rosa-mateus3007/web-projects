@@ -9,17 +9,25 @@ document.addEventListener('DOMContentLoaded', () => {
     mostrarCampoOutroAssunto();
     efeitoNeve();
     contadorRegressivo();
+    if (typeof produtos !== 'undefined') {
+        mostrarProdutos(produtos);
+    }
 });
 
 // ==========================================
 // 1. Efeito Parallax
 // ==========================================
 function efeitoParallax() {
+
+    const elementoParallax = document.querySelector('.parallax');
+    if (!elementoParallax) return;
+
     const titulo = document.getElementById('titulo');
     const arvore = document.getElementById('arvore');
     const estrelas = document.getElementById('estrelas');
     const cidade = document.getElementById('cidade');
     let ticking = false;
+
 
     function updateParallax() {
         const value = window.scrollY;
@@ -176,5 +184,23 @@ function contadorRegressivo() {
 // 6. Gerador dos cards de produtos na página de produtos
 // ==========================================
 
-// FUNÇÕES AUXILIARES (Ficam fora do DOM)
+function formatarPreco(valor) {
+    return Number(valor).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+}
+
+function criarCard(produto) {
+    return `
+    <article class="card">
+        <img src="${produto.imagem}" alt="${produto.nome}" loading="lazy">
+        <h3>${produto.nome}</h3>
+        <p>${produto.descricao}</p>
+        <strong>${formatarPreco(produto.preco)}</strong>
+        <button class="btn-comprar" data-id="${produto.id}">Adicionar ao carrinho</button>
+    </article>`;
+}
+
+function mostrarProdutos(lista) {
+    const area = document.getElementById("lista-produtos");
+    area.innerHTML = lista.map(criarCard).join("");
+}
 
