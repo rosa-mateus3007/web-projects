@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     mostrarCampoOutroAssunto();
     efeitoNeve();
     contadorRegressivo();
-    mostrarProdutos(produtos); 
+    if (typeof produtos !== 'undefined') {
+        mostrarProdutos(produtos);
+    }
 });
 
 // ==========================================
@@ -198,9 +200,6 @@ function criarCard(produto) {
 }
 
 function mostrarProdutos(lista) {
-    const area = document.getElementById("lista-produtos");
-    if (!area) return;
-
     area.innerHTML = lista.map(criarCard).join("");
 }
 
