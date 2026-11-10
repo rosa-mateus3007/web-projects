@@ -176,5 +176,27 @@ function contadorRegressivo() {
 // 6. Gerador dos cards de produtos na página de produtos
 // ==========================================
 
-// FUNÇÕES AUXILIARES (Ficam fora do DOM)
+function formatarPreco(valor) {
+    return Number(valor).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+}
+
+function criarCard(produto) {
+    return `
+    <article class="card">
+        <img src="${produto.imagem}" alt="${produto.nome}" loading="lazy">
+        <h3>${produto.nome}</h3>
+        <p>${produto.descricao}</p>
+        <strong>${formatarPreco(produto.preco)}</strong>
+        <button class="btn-comprar" data-id="${produto.id}">Adicionar ao carrinho</button>
+    </article>`;
+}
+
+function mostrarProdutos(lista) {
+    const area = document.getElementById("lista-produtos");
+    
+    // Verificação (Early Return) direto na função: se o elemento não existir, para aqui sem erro!
+    if (!area) return;
+
+    area.innerHTML = lista.map(criarCard).join("");
+}
 
