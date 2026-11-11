@@ -68,6 +68,10 @@
     pointer-events: none;
     user-select: none;
 }
+#lua {
+    object-fit: contain;
+    object-position: center;
+}
 
 /* CAMADA 1 */
 #cidade {
@@ -1149,4 +1153,58 @@ footer {
     border-radius: 12px;
     border: 2px solid var(--dourado);
 }
+ 
+
+/* BOTÃO DO CARRINHO */
+.btn-icone-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+
+    padding: 12px 20px;
+    border: 2px solid var(--dourado);
+    border-radius: 25px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* CONTADOR DO CARRINHO */
+#contador-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 23px;
+    height: 23px;
+
+    background-color: var(--azul-escuro);
+    color: var(--dourado);
+
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.btn-icone-carrinho:hover {
+    background-color: var(--azul-escuro);
+    color: var(--dourado);
+    border-color: var(--dourado);
+    transform: translateY(-3px);
+}
+
+/* CONTADOR NO HOVER */
+.btn-icone-carrinho:hover #contador-carrinho {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+}
+
 
