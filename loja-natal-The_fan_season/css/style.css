@@ -1399,7 +1399,7 @@ footer {
 
 #itens-carrinho li button {
     background-color: #e74c3c;
-    color: white;
+    color: var(--cor-branco);
     border: none;
     width: 24px;
     height: 24px;
