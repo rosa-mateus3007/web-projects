@@ -1410,3 +1410,26 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+/* ==========================================
+   BOTÃO DE MÚSICA
+========================================== */
+
+#btn-musica {
+    background-color: var(--azul-escuro);
+    color: var(--dourado);
+    border: 1px solid var(--azul-claro);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#btn-musica:hover {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+    transform: scale(1.05);
+}

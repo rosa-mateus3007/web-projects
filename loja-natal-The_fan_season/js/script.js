@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     abrirModalCarrinho();
     quiz();
     slideshow();
+    musica();
 });
 
 // ==========================================
@@ -542,4 +543,29 @@ function slideshow() {
 
     // Troca automática a cada 5 segundos
     setInterval(() => mostrarSlide(atual + 1), 5000);
+}
+
+// ==========================================
+// 11. Música
+// ==========================================
+
+function musica() {
+    const botaoMusica = document.getElementById("btn-musica");
+    
+    // Se o botão de música não existir na página atual, o código para aqui
+    if (!botaoMusica) return;
+
+    const musica = new Audio("audio/musica-natal.mpeg");
+    musica.loop = true; // Repete sem parar
+    musica.volume = 0.3; // Volume baixo (de 0 a 1)
+
+    botaoMusica.addEventListener("click", () => {
+        if (musica.paused) {
+            musica.play();
+            botaoMusica.textContent = "Pausar música";
+        } else {
+            musica.pause();
+            botaoMusica.textContent = "Tocar música";
+        }
+    });
 }
