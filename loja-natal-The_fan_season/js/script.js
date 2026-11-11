@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     inicializarFiltros();
     configurarBotoesComprar();
+    abrirModalCarrinho();
     quiz();
     slideshow();
 });
@@ -264,7 +265,7 @@ function inicializarFiltros() {
 }
 
 // ==========================================
-// 8. Adicionar ao carrinho 
+// 8. Carrinho 
 // ==========================================
 
 // Array que vai armazenar os produtos adicionados ao carrinho
@@ -353,6 +354,45 @@ function configurarBotoesComprar() {
             adicionarAoCarrinho(idProduto);
         }
     });
+}
+
+// Função do modal do carrinho
+function abrirModalCarrinho() {
+    const btnAbrir = document.querySelector('#btnAbrirCarrinho');
+    const btnFechar = document.querySelector('#fechar-carrinho');
+    const modal = document.querySelector('#modal-carrinho');
+    const btnFinalizar = document.querySelector('#btn-finalizar');
+
+    // Se o botão do carrinho NÃO existir na página, o código para aqui e vai embora
+    if (!btnAbrir) return; 
+
+    btnAbrir.addEventListener('click', () => {
+        modal.classList.add('ativo');
+        atualizarCarrinho(); // Garante que a lista atualiza ao abrir
+    });
+
+    btnFechar.addEventListener('click', () => {
+        modal.classList.remove('ativo');
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.classList.remove('ativo');
+        }
+    });
+
+    if (btnFinalizar) {
+        btnFinalizar.addEventListener('click', () => {
+            if (carrinho.length === 0) {
+                alert("Seu carrinho está vazio!");
+                return;
+            }
+            alert('Compra finalizada com sucesso! A The Fan Season agradece a sua preferência. Feliz Natal!');
+            carrinho = [];
+            atualizarCarrinho();
+            modal.classList.remove('ativo');
+        });
+    }
 }
 
 // ==========================================
@@ -444,4 +484,62 @@ function quiz() {
         document.getElementById("resultado-titulo").textContent = nomes[melhorCat];
     }
     mostrarPergunta();
+}
+
+// ==========================================
+// 10. Slideshow
+// ==========================================
+function slideshow() {
+    const container = document.getElementById("slideshow-destaques");
+    if (!container) return; 
+
+    // Verifica se a lista global de produtos existe
+    if (typeof produtos === 'undefined') return;
+
+    // Filtra apenas os produtos com destaque: true
+    const destaques = produtos.filter(item => item.destaque === true);
+    if (destaques.length === 0) return;
+
+    // Salva os botões para recolocá-los depois
+    const botoesHTML = `
+        <button id="anterior" class="btn-slide">&#10094;</button>
+        <button id="proximo" class="btn-slide">&#10095;</button>
+    `;
+
+    let htmlSlides = "";
+    
+    // ATENÇÃO AQUI: Mudamos de 'produto' para 'item' para evitar confusão com a variável 'produtos'
+    destaques.forEach((item, index) => {
+        const classeAtiva = index === 0 ? "slide ativo" : "slide";
+        
+        htmlSlides += `
+            <div class="${classeAtiva}">
+                <img src="${item.imagem}" alt="${item.nome}">
+                <div class="info-slide">
+                    <h3>${item.nome}</h3>
+                    <p>R$ ${item.preco.toFixed(2)}</p>
+                </div>
+            </div>
+        `;
+    });
+
+    // Insere os slides junto com os botões no container
+    container.innerHTML = htmlSlides + botoesHTML;
+
+    // Lógica de rotação do carrossel
+    const slides = container.querySelectorAll(".slide");
+    let atual = 0;
+
+    function mostrarSlide(indice) {
+        slides.forEach(s => s.classList.remove("ativo"));
+        atual = (indice + slides.length) % slides.length;
+        slides[atual].classList.add("ativo");
+    }
+
+    // Adiciona os eventos nos botões
+    document.getElementById("proximo").addEventListener("click", () => mostrarSlide(atual + 1));
+    document.getElementById("anterior").addEventListener("click", () => mostrarSlide(atual - 1));
+
+    // Troca automática a cada 5 segundos
+    setInterval(() => mostrarSlide(atual + 1), 5000);
 }

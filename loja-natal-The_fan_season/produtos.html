@@ -89,6 +89,31 @@
             <p>Desenvolvido por Mateus Rosa e Sarah Santos.</p>
         </div>
     </footer>
+
+    <div id="modal-carrinho" class="modal-container">
+        <div class="modal-conteudo">
+            <span id="fechar-carrinho" class="btn-fechar">&times;</span>
+            
+            <h2>🛒 Seu Carrinho</h2>
+            <p>Confira os produtos selecionados antes de finalizar sua compra.</p>
+            
+            <!-- Lista de itens onde o JS vai injetar os produtos -->
+            <ul id="itens-carrinho" style="list-style: none; padding: 0; margin: 20px 0; max-height: 250px; overflow-y: auto;">
+                <!-- Os produtos adicionados aparecem aqui automaticamente -->
+            </ul>
+
+            <!-- Rodapé do Carrinho -->
+            <div class="modal-rodape" style="border-top: 1px solid var(--azul-claro); padding-top: 15px; display: flex; flex-direction: column; gap: 10px;">
+                <p style="color: var(--cor-branco); font-size: 16px; margin: 0;">
+                    <strong>Total:</strong> <span id="total-carrinho" style="color: var(--dourado);">R$ 0,00</span>
+                </p>
+                <button id="btn-finalizar" style="width: 100%; padding: 12px; background-color: var(--dourado); color: var(--azul-escuro); border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s;">
+                    Finalizar Compra
+                </button>
+            </div>
+        </div>
+    </div>
+    
     <script src="js/produtos.js"></script>
     <script src="js/script.js"></script>
 </body>
