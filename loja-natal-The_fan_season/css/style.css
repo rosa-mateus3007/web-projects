@@ -668,7 +668,7 @@ footer {
 }
 /* QUADRADOS DA HISTÓRIA */
 .historia-section {
-    background-color: var(--cor-branco)
+    background-color: var(--cor-branco);
     padding: 30px;
     border-radius: 15px;
     margin: 30px auto;
