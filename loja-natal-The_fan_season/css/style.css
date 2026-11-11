@@ -250,6 +250,8 @@
     border-radius: 25px;
     cursor: pointer;
     transition: 0.3s;
+    display: flex;
+    justify-content: center;
 }
 
 .btn-contato:hover {
