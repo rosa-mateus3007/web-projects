@@ -645,7 +645,7 @@ footer {
 /* TÍTULO PRINCIPAL */
 #titulo-sobre-nos {
     font-family: Georgia, serif;
-    color:var(--dourado)
+    color:var(--dourado);
     text-align: center;
 }
 
@@ -680,7 +680,7 @@ footer {
     flex-shrink: 0;
     overflow: hidden;
     border-radius: 50%;
-    border: 3px solid var(--dourado)
+    border: 3px solid var(--dourado);
 }
 
 .membro-avatar img {
@@ -693,7 +693,7 @@ footer {
 /* TÍTULO DA EQUIPE */
 .apresentacao-da-equipe h2 {
     font-family: Georgia, serif;
-    color: var(--dourado)
+    color: var(--dourado);
     text-align: center;
 }
 
@@ -710,7 +710,7 @@ footer {
 /* NOMES */
 .membro-info h3 {
     font-family: Georgia, serif;
-    color: var(--dourado)
+    color: var(--dourado);
     font-size: 24px;
     margin-bottom: 15px;
 }
@@ -718,7 +718,7 @@ footer {
 /* TEXTOS */
 .membro-info p {
     font-family: Arial, sans-serif;
-    color: var(--cor-branco)
+    color: var(--cor-branco);
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 10px;
@@ -726,5 +726,66 @@ footer {
 
 /* DESTAQUE DE FUNÇÃO E SOBRE */
 .membro-info strong {
-    color: var(--dourado)
+    color: var(--dourado);
 }
+
+/* ÁREA DOS FILTROS */
+.filtros-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 30px 5%;
+    box-sizing: border-box;
+}
+
+/* BARRA DE PESQUISA */
+#busca {
+    width: 60%;
+    max-width: 550px;
+    padding: 14px 20px;
+    border: 2px solid #6a839d;
+    border-radius: 30px;
+    background-color: var(--cor-branco);
+    color: #35495e;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#busca::placeholder {
+    color: #9aa9b8;
+}
+
+#busca:focus {
+    border-color: #35495e;
+    box-shadow: 0 0 8px rgba(106, 131, 157, 0.3);
+}
+
+/* SELETOR DE CATEGORIAS */
+#categoria {
+    width: 230px;
+    padding: 14px 18px;
+    border: 2px solid #6a839d;
+    border-radius: 30px;
+    background-color: var(--cor-branco);
+    color: #35495e;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+#categoria:focus {
+    border-color: #35495e;
+    box-shadow: 0 0 8px rgba(106, 131, 157, 0.3);
+}
+
+/* OPÇÕES DO SELETOR */
+#categoria option {
+    background-color: var(--cor-branco);
+    color: #35495e;
+}
+
+
