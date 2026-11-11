@@ -174,3 +174,15 @@
         max-width: 100%;
     }
 }
+/* RESPONSIVIDADE */
+@media (max-width: 800px) {
+    .grid-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .grid-produtos {
+        grid-template-columns: 1fr;
+    }
+}
