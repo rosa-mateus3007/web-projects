@@ -1,3 +1,4 @@
+
 :root {
     --cor-branco: #FFFFFF;
     --cor-cinza-claro: #cccccc;
@@ -6,10 +7,11 @@
 
     --azul-escuro: #101B35;
     --azul-claro: #263B60;
-    --dourado: #D9B76E;
+    --azul-quadrado: #8FA5BA;
 
-    --fundo-transparente: rgba(255, 255, 255, 0.1);
+    --dourado: #D9B76E;
 }
+
 /* CONFIGURAÇÃO GERAL */
 * {
     margin: 0;
@@ -65,6 +67,10 @@
 
     pointer-events: none;
     user-select: none;
+}
+#lua {
+    object-fit: contain;
+    object-position: center;
 }
 
 /* CAMADA 1 */
@@ -274,8 +280,8 @@
 
 /* BOTÃO ABRIR */
 .btn-contato {
-    background-color: var(--azul-escuro);
-    color: var(--dourado);
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
     padding: 12px 24px;
     font-size: 16px;
     font-weight: bold;
@@ -285,8 +291,8 @@
 }
 
 .btn-contato:hover {
-    background-color: var(--dourado);
-    color: var(--azul-escuro);
+    background-color: var(--azul-claro);
+    color: var(--dourado);
 }
 
 /* FUNDO DO MODAL */
@@ -672,48 +678,33 @@ footer {
     color: var(--dourado);
 }
 
+
+/* =================================
+ SOBRE NÓS
+================================= */
+
 /* TÍTULO PRINCIPAL */
 #titulo-sobre-nos {
     font-family: Georgia, serif;
     color: var(--dourado);
     text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
 }
 
-/* TÍTULO DA HISTÓRIA */
-.historia-section h3 {
-    font-family: Georgia, serif;
-    color: var(--dourado);
-}
 
-/* TÍTULO DA APRESENTAÇÃO DA EQUIPE */
-.apresentacao-da-equipe h2 {
-    font-family: Georgia, serif;
-    color: var(--dourado);
-}
-
-/* NOMES DOS INTEGRANTES */
-.membro-info h3 {
-    font-family: Georgia, serif;
-    color: var(--dourado);
-}
-
-/* TEXTOS E PARÁGRAFOS */
-.historia-sobre-nos p,
-.apresentacao-da-equipe p {
-    font-family: Arial, sans-serif;
-    color:var(--dourado);
-}
 /* QUADRADOS DA HISTÓRIA */
-.historia-section {
-    background-color: var(--cor-branco);
+.historia-section,
+.introducao-historia {
+    background-color: var(--azul-quadrado);
     padding: 30px;
     border-radius: 15px;
     margin: 30px auto;
     max-width: 1100px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
-/* TÍTULOS DOS QUADRADOS */
+/* TÍTULOS DA HISTÓRIA */
 .historia-section h3 {
     font-family: Georgia, serif;
     color: var(--dourado);
@@ -721,32 +712,35 @@ footer {
     margin-bottom: 20px;
 }
 
-/* TEXTOS DOS QUADRADOS */
-.historia-section p {
-    font-family: Arial, sans-serif;
-    color: var(--azul-escuro);
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-/* INTRODUÇÃO DA HISTÓRIA */
-.introducao-historia {
-    background-color: var(--cor-branco);
-    padding: 30px;
-    border-radius: 15px;
-    margin: 30px auto;
-    max-width: 1100px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-}
-
+/* TEXTOS DA HISTÓRIA */
+.historia-section p,
 .introducao-historia p {
     font-family: Arial, sans-serif;
-    color: var(--azul-escuro);
+    color: var(--cor-branco);
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 15px;
 }
+
+/* TÍTULO DA EQUIPE */
+.apresentacao-da-equipe h2 {
+    font-family: Georgia, serif;
+    color: var(--dourado);
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* CONTAINER DOS INTEGRANTES */
+.membro-equipe {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
 /* FOTOS DOS INTEGRANTES */
 .membro-avatar {
     width: 200px;
@@ -764,24 +758,13 @@ footer {
     object-position: center;
     display: block;
 }
-/* TÍTULO DA EQUIPE */
-.apresentacao-da-equipe h2 {
-    font-family: Georgia, serif;
-    color:var(--dourado);
-    text-align: center;
+
+/* INFORMAÇÕES DOS INTEGRANTES */
+.membro-info {
+    flex: 1;
 }
 
-/* CONTAINER DOS INTEGRANTES */
-.membro-equipe {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 30px;
-    margin: 30px auto;
-    max-width: 1000px;
-}
-
-/* NOMES */
+/* NOMES DOS INTEGRANTES */
 .membro-info h3 {
     font-family: Georgia, serif;
     color: var(--dourado);
@@ -789,19 +772,21 @@ footer {
     margin-bottom: 15px;
 }
 
-/* TEXTOS */
+/* TEXTOS E DESCRIÇÕES */
 .membro-info p {
     font-family: Arial, sans-serif;
-    color: var(--branco);
+    color: var(--cor-branco);
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 10px;
 }
 
-/* DESTAQUE DE FUNÇÃO E SOBRE */
+/* FUNÇÃO DOS INTEGRANTES */
 .membro-info strong {
-    color: var(--dourado);
+    color: var(--cor-branco);
+    font-weight: bold;
 }
+
 
 /* ÁREA DOS FILTROS */
 .filtros-container {
@@ -1075,7 +1060,7 @@ footer {
 
 /* SEÇÃO CONTATO */
 #contato {
-    background-color: #f3f5f7;
+    background-color: var(--azul-escuro);
     padding: 70px 8%;
 }
 
@@ -1091,7 +1076,7 @@ footer {
 
 /* CARDS DE CONTATO */
 .contato-item {
-    background-color: #8fa5ba;
+    background-color: var(--azul-quadrado);
     border-radius: 15px;
     padding: 25px;
     text-align: center;
@@ -1118,14 +1103,14 @@ footer {
 
 /* TEXTOS */
 .contato-item p {
-    color: #ffffff;
+    color: var(--cor-branco);
     font-size: 15px;
     line-height: 1.6;
     margin-bottom: 12px;
 }
 
 .contato-item span {
-    color: #D9B76E;
+    color: var(--dourado);
     font-size: 16px;
     font-weight: bold;
 }
@@ -1146,14 +1131,14 @@ footer {
 
 /* TÍTULO DO ENDEREÇO */
 .contato-mapa h3 {
-    color: #D9B76E;
+    color: var(--dourado);
     font-size: 23px;
     margin-bottom: 15px;
 }
 
 /* ENDEREÇO */
 .contato-mapa p {
-    color: #ffffff;
+    color: var(--cor-branco);
     font-size: 15px;
     line-height: 1.8;
     margin-bottom: 20px;
@@ -1166,6 +1151,60 @@ footer {
     height: 280px;
     object-fit: cover;
     border-radius: 12px;
-    border: 2px solid #D9B76E;
+    border: 2px solid var(--dourado);
 }
+ 
+
+/* BOTÃO DO CARRINHO */
+.btn-icone-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+
+    padding: 12px 20px;
+    border: 2px solid var(--dourado);
+    border-radius: 25px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* CONTADOR DO CARRINHO */
+#contador-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 23px;
+    height: 23px;
+
+    background-color: var(--azul-escuro);
+    color: var(--dourado);
+
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.btn-icone-carrinho:hover {
+    background-color: var(--azul-escuro);
+    color: var(--dourado);
+    border-color: var(--dourado);
+    transform: translateY(-3px);
+}
+
+/* CONTADOR NO HOVER */
+.btn-icone-carrinho:hover #contador-carrinho {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+}
+
 
