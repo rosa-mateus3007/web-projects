@@ -1,15 +1,113 @@
-/* RESPONSIVIDADE DO MENU */
-@media screen and (max-width: 768px) {
 
-    /* CABEÇALHO */
+
+/* Ajustes gerais */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   TABLETS - ATÉ 900px
+========================================== */
+
+@media screen and (max-width: 900px) {
+
+    /* HEADER */
     header {
-        height: 80px;
-        padding: 0 20px;
+        padding: 0 25px;
     }
 
-    /* LOGOTIPO */
+    .menu {
+        gap: 18px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    /* SOBRE NÓS */
+    .apresentacao-da-equipe {
+        gap: 20px;
+    }
+
+    .membro-equipe {
+        gap: 15px;
+    }
+
+    /* PRODUTOS */
+    .container-produtos {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .grid-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    /* FILTROS */
+    .filtros-container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #busca {
+        max-width: 100%;
+    }
+
+    /* CONTATO */
+    .contato-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-mapa {
+        grid-column: 1;
+        grid-row: auto;
+        width: 100%;
+    }
+
+    .contato-mapa iframe {
+        width: 100%;
+    }
+
+    /* FOOTER */
+    .container-footer {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    footer {
+        padding: 40px 30px 20px;
+    }
+}
+
+
+/* ==========================================
+   CELULARES - ATÉ 700px
+========================================== */
+
+@media screen and (max-width: 700px) {
+
+    /* HEADER */
+    header {
+        height: 75px;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
     .logo-header {
-        width: 120px;
+        width: 65px;
     }
 
     /* BOTÃO HAMBÚRGUER */
@@ -20,152 +118,122 @@
         align-items: center;
         gap: 6px;
 
-        width: 40px;
-        height: 40px;
+        width: 42px;
+        height: 42px;
 
-        background: transparent;
+        padding: 8px;
         border: none;
-
+        background: transparent;
         cursor: pointer;
+        z-index: 1001;
     }
 
-    /* RISQUINHOS */
     .menu-hamburguer span {
-        width: 28px;
+        display: block;
+        width: 27px;
         height: 3px;
-
-        background-color: #D9B76E;
+        background-color: var(--dourado);
         border-radius: 5px;
 
-        transition: 0.3s;
+        transition: 0.3s ease;
     }
 
-    /* MENU FECHADO */
+    /* ANIMAÇÃO DO HAMBÚRGUER */
+    .menu-hamburguer.ativo span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-hamburguer.ativo span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-hamburguer.ativo span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* MENU MOBILE */
     .menu {
+        display: none;
+
         position: absolute;
-        top: 80px;
-        right: 0;
+        top: 100%;
+        left: 0;
 
         width: 100%;
+        padding: 25px 20px;
 
-        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0;
+        gap: 22px;
 
-        padding: 0;
+        background-color: var(--azul-escuro);
 
-        background-color: #101B35;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
 
-        opacity: 0;
-        visibility: hidden;
-
-        transform: translateY(-10px);
-        transition: 0.3s;
+        z-index: 1000;
     }
 
-    /* MENU ABERTO */
     .menu.ativo {
-        opacity: 1;
-        visibility: visible;
-
-        transform: translateY(0);
+        display: flex;
     }
 
-    /* LINKS */
     .menu a {
+        font-size: 16px;
         width: 100%;
-        padding: 16px;
-
         text-align: center;
-
-        border-top: 1px solid #263B60;
     }
 
-    /* EFEITO DOS LINKS */
-    .menu a:hover {
-        background-color: #263B60;
-        color: #D9B76E;
+    /* PARALLAX */
+    .parallax {
+        height: 75vh;
+        min-height: 450px;
     }
 
-    .menu a::after {
-        display: none;
+    /* CONTADOR */
+    .container-contador {
+        width: 95%;
     }
-}
-@media (max-width: 768px) {
+
+    .container-contador .contador .tempo {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .container-contador .contador .tempo .card {
+        min-width: 65px;
+        padding: 12px;
+    }
+
+    /* SOBRE NÓS */
+    .apresentacao-da-equipe {
+        flex-direction: column;
+        align-items: center;
+    }
 
     .membro-equipe {
         flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .member-right {
-        flex-direction: column-reverse;
-    }
-
-    .membro-avatar {
-        width: 160px;
-        height: 160px;
-    }
-
-}
-/* =========================
-   FOOTER RESPONSIVO
-========================= */
-
-@media screen and (max-width: 768px) {
-
-    footer {
-        padding: 35px 25px 20px;
-    }
-
-    .container-footer {
-        flex-direction: column;
         align-items: center;
-
         text-align: center;
-        gap: 35px;
-    }
-
-    .footer-img,
-    .footer-navegacao,
-    .footer-atendimento,
-    .footer-pagamento {
         width: 100%;
     }
 
-    .logo-footer {
-        width: 140px;
+    /* PRODUTOS */
+    .grid-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
     }
 
-    .container-footer h4 {
-        font-size: 17px;
+    .grid-produtos .card img {
+        height: 190px;
+        object-fit: cover;
     }
 
-    .container-footer h4::after {
-        margin: 8px auto 0;
-    }
-
-    .container-footer li {
-        font-size: 14px;
-    }
-
-    .footer-bottom {
-        margin-top: 30px;
-        padding-top: 20px;
-    }
-
-    .footer-bottom p {
-        font-size: 11px;
-        line-height: 1.6;
-    }
-}
-/* RESPONSIVIDADE */
-@media (max-width: 600px) {
+    /* FILTROS */
     .filtros-container {
         flex-direction: column;
-        gap: 15px;
+        align-items: stretch;
+        width: 100%;
     }
 
     #busca,
@@ -173,5 +241,133 @@
         width: 100%;
         max-width: 100%;
     }
+
+    /* CONTATO */
+    .contato-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contato-mapa {
+        width: 100%;
+    }
+
+    .contato-mapa iframe {
+        width: 100%;
+        min-height: 280px;
+    }
+
+    /* FOOTER */
+    .container-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer {
+        padding: 35px 20px 20px;
+    }
+
+    /* MODAL */
+    .modal-container {
+        padding: 15px;
+    }
+
+    .modal-conteudo {
+        width: 100%;
+        max-width: 450px;
+        padding: 25px 18px;
+    }
 }
+
+
+/* ==========================================
+   CELULARES PEQUENOS - ATÉ 480px
+========================================== */
+
+@media screen and (max-width: 480px) {
+
+    /* HEADER */
+    header {
+        padding: 0 15px;
+    }
+
+    .logo-header {
+        width: 58px;
+    }
+
+    /* PARALLAX */
+    .parallax {
+        height: 65vh;
+        min-height: 380px;
+    }
+
+    /* CONTADOR */
+    .container-contador {
+        width: 95%;
+    }
+
+    .container-contador .contador .tempo {
+        gap: 8px;
+    }
+
+    .container-contador .contador .tempo .card {
+        min-width: 55px;
+        padding: 10px 7px;
+    }
+
+    /* PRODUTOS */
+    .container-produtos {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .grid-produtos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .grid-produtos .card {
+        width: 100%;
+    }
+
+    .grid-produtos .card img {
+        height: 230px;
+    }
+
+    /* SOBRE NÓS */
+    .membro-equipe img {
+        max-width: 160px;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    /* CONTATO */
+    .contato-mapa iframe {
+        min-height: 230px;
+    }
+
+    /* BOTÃO CARRINHO */
+    .btn-icone-carrinho {
+        max-width: 100%;
+    }
+
+    /* MODAL */
+    .modal-conteudo {
+        padding: 20px 15px;
+    }
+
+    .modal-conteudo input,
+    .modal-conteudo textarea,
+    .modal-conteudo select {
+        width: 100%;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 30px 15px 15px;
+    }
+}
+
 

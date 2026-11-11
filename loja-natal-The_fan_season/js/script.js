@@ -443,3 +443,57 @@ function quiz() {
     }
     mostrarPergunta();
 }
+
+const botaoMenu = document.getElementById("menu-hamburguer");
+const menu = document.querySelector(".menu");
+
+botaoMenu.addEventListener("click", () => {
+    const menuAberto = menu.classList.toggle("ativo");
+
+    botaoMenu.classList.toggle("ativo", menuAberto);
+
+    botaoMenu.setAttribute("aria-expanded", menuAberto);
+
+    botaoMenu.setAttribute(
+        "aria-label",
+        menuAberto ? "Fechar menu" : "Abrir menu"
+    );
+});
+
+// Fecha o menu ao clicar em uma opção
+const linksMenu = menu.querySelectorAll("a");
+
+linksMenu.forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("ativo");
+        botaoMenu.classList.remove("ativo");
+
+        botaoMenu.setAttribute("aria-expanded", "false");
+        botaoMenu.setAttribute("aria-label", "Abrir menu");
+    });
+});
+
+// Fecha o menu ao clicar fora dele
+document.addEventListener("click", (evento) => {
+    const clicouNoMenu = menu.contains(evento.target);
+    const clicouNoBotao = botaoMenu.contains(evento.target);
+
+    if (!clicouNoMenu && !clicouNoBotao) {
+        menu.classList.remove("ativo");
+        botaoMenu.classList.remove("ativo");
+
+        botaoMenu.setAttribute("aria-expanded", "false");
+        botaoMenu.setAttribute("aria-label", "Abrir menu");
+    }
+});
+
+// Fecha o menu ao pressionar ESC
+document.addEventListener("keydown", (evento) => {
+    if (evento.key === "Escape") {
+        menu.classList.remove("ativo");
+        botaoMenu.classList.remove("ativo");
+
+        botaoMenu.setAttribute("aria-expanded", "false");
+        botaoMenu.setAttribute("aria-label", "Abrir menu");
+    }
+});
