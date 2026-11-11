@@ -789,3 +789,18 @@ footer {
 }
 
 
+.contador-produtos {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: var(--cor-branco);
+    border: 2px solid #6a839d;
+    border-radius: 10px;
+    color: #35495e;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+
