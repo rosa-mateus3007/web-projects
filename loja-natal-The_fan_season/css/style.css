@@ -634,7 +634,7 @@ footer {
 
 .footer-bottom p {
     font-size: 13px;
-    color: var(--cor-cinza);
+    color: var(--cor-branco);
     margin-bottom: 10px;
 }
 
@@ -645,33 +645,33 @@ footer {
 /* TÍTULO PRINCIPAL */
 #titulo-sobre-nos {
     font-family: Georgia, serif;
-    color: #D9B76E;
+    color:var(--dourado)
     text-align: center;
 }
 
 /* TÍTULO DA HISTÓRIA */
 .historia-section h3 {
     font-family: Georgia, serif;
-    color: #D9B76E;
+    color: var(--dourado)
 }
 
 /* TÍTULO DA APRESENTAÇÃO DA EQUIPE */
 .apresentacao-da-equipe h2 {
     font-family: Georgia, serif;
-    color: #D9B76E;
+    color: var(--dourado)
 }
 
 /* NOMES DOS INTEGRANTES */
 .membro-info h3 {
     font-family: Georgia, serif;
-    color: #D9B76E;
+    color: var(--dourado)
 }
 
 /* TEXTOS E PARÁGRAFOS */
 .historia-sobre-nos p,
 .apresentacao-da-equipe p {
     font-family: Arial, sans-serif;
-    color: #FFFFFF;
+    color: var(--cor-branco)
 }
 /* FOTOS DOS INTEGRANTES */
 .membro-avatar {
@@ -680,7 +680,7 @@ footer {
     flex-shrink: 0;
     overflow: hidden;
     border-radius: 50%;
-    border: 3px solid #D9B76E;
+    border: 3px solid var(--dourado)
 }
 
 .membro-avatar img {
@@ -693,7 +693,7 @@ footer {
 /* TÍTULO DA EQUIPE */
 .apresentacao-da-equipe h2 {
     font-family: Georgia, serif;
-    color: #D9B76E;
+    color: var(--dourado)
     text-align: center;
 }
 
@@ -710,7 +710,7 @@ footer {
 /* NOMES */
 .membro-info h3 {
     font-family: Georgia, serif;
-    color: #D9B76E;
+    color: var(--dourado)
     font-size: 24px;
     margin-bottom: 15px;
 }
@@ -718,7 +718,7 @@ footer {
 /* TEXTOS */
 .membro-info p {
     font-family: Arial, sans-serif;
-    color: #FFFFFF;
+    color: var(--cor-branco)
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 10px;
@@ -726,5 +726,5 @@ footer {
 
 /* DESTAQUE DE FUNÇÃO E SOBRE */
 .membro-info strong {
-    color: #D9B76E;
+    color: var(--dourado)
 }
