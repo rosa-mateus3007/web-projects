@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - The fan season</title>
+    <link rel="icon" href="img/fanicons/sino_natalino-favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+    <header>   
+        <img src="img/logo.png" alt="Logotipo da Loja de Natal The fan season" class="logo-header">
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+        <!-- Conteúdo Principal da Página do Quiz -->
+    <main class="container-quiz">
+        <h1>Descubra seu estilo de Fã!</h1>
+        <p>Responda às perguntas abaixo e descubra qual categoria mais combina com você.</p>
+
+        <!-- Caixa principal do Quiz (É aqui que o JavaScript procura pelo id="quiz-box") -->
+        <div id="quiz-box">
+            
+            <!-- Parte das Perguntas (Visível durante o quiz) -->
+            <div id="pergunta-container">
+                <h3 id="questao-titulo">Carregando pergunta...</h3>
+                <div id="opcoes-container" class="opcoes-grid">
+                    <!-- O JavaScript vai injetar os 4 botões de alternativas aqui dentro -->
+                </div>
+            </div>
+
+            <!-- Parte do Resultado (Fica escondido até o quiz terminar) -->
+            <div id="resultado-container" style="display: none;">
+                <h2>Seu resultado: <span id="resultado-titulo"></span></h2>
+                <p>Com base nas suas respostas, essa é a categoria ideal para você aproveitar no nosso site!</p>
+                
+                <!-- Botão que leva o usuário direto para a página de produtos -->
+                <a href="produtos.html" class="btn-ver-produtos">Ver Produtos da Categoria</a>
+            </div>
+
+        </div>
+        
+
+
+    </main>
+    <footer>
+        <div class="container-footer">
+            <div class="footer-img">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Logotipo da Loja de Natal The fan season" class="logo-footer">
+                </a>
+                <p>O natal dos fãs começa aqui!</p>
+            </div>
+
+            <div class="footer-navegacao">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-atendimento">
+                <h4>Atendimento</h4>
+                <ul>
+                    <li>Email: ouvidoria@thefanseason.com</li>
+                    <li>WhatsApp: (18) 30303-1818</li>
+                    <li>Horário: Seg a Sex, 9h às 18h</li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-pagamento">
+                <h4>Pagamento</h4>
+                <ul class="metodos-pagamento">
+                    <li><span>💳</span> Cartão de Crédito</li>
+                    <li><span>⚡</span> Pix (5% de desconto)</li>
+                </ul>
+                <p id="seguranca">🔒 Compra 100% Segura</p>
+            </div>
+             
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 The fan season - Loja de natal fictícia para fins de estudo e aprendizagem.</p>
+            <p>Desenvolvido por Mateus Rosa e Sarah Santos.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
