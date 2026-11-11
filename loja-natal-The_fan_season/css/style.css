@@ -664,7 +664,7 @@ footer {
 .historia-sobre-nos p,
 .apresentacao-da-equipe p {
     font-family: Arial, sans-serif;
-    color:var(--cor-branco);
+    color:var(--dourado);
 }
 /* QUADRADOS DA HISTÓRIA */
 .historia-section {
