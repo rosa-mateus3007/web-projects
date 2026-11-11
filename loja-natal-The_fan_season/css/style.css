@@ -541,8 +541,15 @@ footer {
     flex: 1;
 }
 
+.footer-img p {
+    color: var(--dourado);
+    font-size: 14px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
 .logo-footer {
-    width: 160px;
+    width: 80px;
     height: auto;
 }
 
