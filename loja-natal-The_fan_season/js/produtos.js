@@ -24,7 +24,7 @@ const produtos = [
         preco: 85.90,
         imagem: "img/produtos/the-eras-tour-snow-globe.jpeg",
         descricao: "Caixinha de música em formato de globo de neve, com o tema 'The Eras Tour'. Toca a música 'You're On Your Own, Kid'. Perfeito para fãs de Taylor Swift, adicionando um toque mágico à decoração.",
-        destaque: false
+        destaque: true
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ const produtos = [
         preco: 119.99,
         imagem: "img/produtos/kit-de-biscoito-da-taylor-swift.jpeg",
         descricao: "Kit de cozinha, (avental, luva, descansa panela e caixinha com cortadores em formato de cardigan e estrela) personalizado do álbum folklore, ideal para fãs de Taylor Swift que gostam de cozinhar e querem adicionar um toque especial à sua experiência culinária.",
-        destaque: false
+        destaque: true
     },
     
     {
@@ -48,7 +48,7 @@ const produtos = [
     {
         id: 6,
         nome: "GUTS christmas stocking",
-        categoria: ["Olivia Rodrigo", "decoracao"],
+        categoria: ["Olivia Rodrigo", "enfeite"],
         preco: 50.80,
         imagem: "img/produtos/guts-christmas-stocking.jpeg",
         descricao: "Enfeite natalino inspirado na estética de Olivia Rodrigo, com detalhes em estrelas roxo e vermelho. Ideal para fãs da cantora que desejam adicionar um toque de estilo e personalidade à decoração natalina.",
@@ -75,11 +75,11 @@ const produtos = [
     {
         id: 9,
         nome: "Kit enfeites natalinos Harry Styles",
-        categoria: ["Harry Styles", "decoracao"],
+        categoria: ["Harry Styles", "enfeite"],
         preco: 89.99,
         imagem: "img/produtos/kit-enfeites-natalinos-do-harry-styles.jpeg",
         descricao: "4 enfeites para árvore de natal inspirados na estética de Harry Styles, com detalhes em dourado, verde e vermelho. Ideal para fãs do cantor que desejam adicionar um toque de estilo e personalidade à decoração natalina.",
-        destaque: false
+        destaque: true
     },
     {
         id: 10,
@@ -97,12 +97,12 @@ const produtos = [
         preco: 139.99,
         imagem: "img/produtos/moletom-lover.jpeg",
         descricao: "Moletom bordado Taylor swift, Lover. Disponível em diversas cores. Ideal para fãs da cantora que desejam adicionar um toque de estilo e personalidade à sua roupa.",
-        destaque: false
+        destaque: true
     },
     {
         id: 12,
         nome: "Enfeite de árvore SOUR",
-        categoria: ["Olivia Rodrigo", "decoracao"],
+        categoria: ["Olivia Rodrigo", "enfeite"],
         preco: 29.99,
         imagem: "img/produtos/enfeite-de-arvore-SOUR.jpeg",
         descricao: "Enfeite de árvore de natal good 4u Olívia Rodrigo, SOUR. Perfeito para fãs de Olívia Rodrigo, adicionando um toque de estilo à decoração.",
@@ -115,12 +115,12 @@ const produtos = [
         preco: 139.99,
         imagem: "img/produtos/moletom-all-american.jpeg",
         descricao: "Moletom Olivia Rodrigo, all American red. Confeccionado em algodão de alta qualidade, proporcionando conforto e estilo. Ideal para fãs da cantora que desejam adicionar um toque de personalidade à sua roupa.",
-        destaque: false
+        destaque: true
     },
     {
         id: 14,
         nome: "A nonsense Christmas stocking",
-        categoria: ["Sabrina Carpenter", "decoracao"],
+        categoria: ["Sabrina Carpenter", "enfeite"],
         preco: 50.80,
         imagem: "img/produtos/a-nonsense-christmas-christmas-stocking.png",
         descricao: "Meia de natal com design absurdo, perfeita para quem gosta de coisas diferentes e criativas.",
@@ -335,12 +335,12 @@ const produtos = [
     },
     {
         id: 38,
-        nome: "",
-        categoria: [" ", " "],
-        preco: 0.00,
+        nome: "Enfeite Cardigan Folklore Taylor Swift",
+        categoria: ["Taylor Swift", "enfeite"],
+        preco: 52.00,
         imagem: "img/produtos/",
-        descricao: "",
-        destaque: false
+        descricao: "Miniatura em resina do icônico cardigã creme com detalhes de estrelas e o selo do álbum Folklore da Taylor Swift. Uma peça delicada e cheia de afeto para pendurar e enfeitar o ambiente.",
+        destaque: true
     },
     {
         id: 39,
@@ -416,12 +416,12 @@ const produtos = [
     },
     {
         id: 47,
-        nome: "",
-        categoria: [" ", " "],
-        preco: 0.00,
+        nome: "Moletom Holiday Harry Styles",
+        categoria: ["Harry Styles", "roupas"],
+        preco: 149.90,
         imagem: "img/produtos/",
-        descricao: "",
-        destaque: false
+        descricao: "Moletom bege macio com estampa festiva e o artista caracterizado em clima comemorativo. Perfeito para compor um look confortável e descontraído durante os encontros natalinos.",
+        destaque: true
     },
     {
         id: 48,

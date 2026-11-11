@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     inicializarFiltros();
     configurarBotoesComprar();
     quiz();
+    slideshow();
 });
 
 // ==========================================
@@ -135,7 +136,7 @@ function efeitoNeve() {
 }
 
 // ==========================================
-// 5. Contador de tempo regressivo para o Natal
+// 5. Contador regressivo para o Natal
 // ==========================================
 function contadorRegressivo() {
 
@@ -202,11 +203,12 @@ function criarCard(produto) {
 
 function mostrarProdutos(lista) {
     const area = document.getElementById("lista-produtos");
+    if (!area) return;
     area.innerHTML = lista.map(criarCard).join("");
 }
 
 // ==========================================
-// 7. FILTRO E DE BUSCA DE PRODUTOS
+// 7. FILTRO E BUSCA DE PRODUTOS
 // ==========================================
 function inicializarFiltros() {
     const campoBusca = document.getElementById("busca");
@@ -340,7 +342,7 @@ function configurarBotoesComprar() {
 }
 
 // ==========================================
-// QUIZ
+// 9. QUIZ
 // ==========================================
 
 function quiz() {
@@ -428,4 +430,64 @@ function quiz() {
         document.getElementById("resultado-titulo").textContent = nomes[melhorCat];
     }
     mostrarPergunta();
+}
+
+// ==========================================
+// 9. Slideshow dos produtos em destaque
+// ==========================================
+
+function slideshow() {
+    const container = document.getElementById("slideshow-destaques");
+    
+    // Verificação de segurança: se não estiver na Home, para aqui sem dar erro
+    if (!container) return; 
+
+    // Garante que a lista 'produtos' existe antes de filtrar
+    if (typeof produtos === 'undefined') return;
+
+    // Filtra apenas os produtos com destaque: true
+    const destaques = produtos.filter(p => p.destaque === true);
+    if (destaques.length === 0) return;
+
+    // Salva os botões para recolocá-los depois de injetar os slides
+    const htmlBotoes = `
+        <button id="anterior" class="btn-slide">&#10094;</button>
+        <button id="proximo" class="btn-slide">&#10095;</button>
+    `;
+
+    // Cria o HTML de cada slide
+    let htmlSlides = "";
+    destaques.forEach((item, index) => {
+        const classeAtiva = index === 0 ? "slide ativo" : "slide";
+        
+        htmlSlides += `
+            <div class="${classeAtiva}">
+                <img src="${item.imagem}" alt="${item.nome}">
+                <div class="info-slide">
+                    <h3>${item.nome}</h3>
+                    <p>R$ ${item.preco.toFixed(2)}</p>
+                </div>
+            </div>
+        `;
+    });
+
+    // Insere os slides junto com os botões no container
+    container.innerHTML = htmlSlides + htmlBotoes;
+
+    // Lógica de rotação do carrossel
+    const slides = container.querySelectorAll(".slide");
+    let atual = 0;
+
+    function mostrarSlide(indice) {
+        slides.forEach(s => s.classList.remove("ativo"));
+        atual = (indice + slides.length) % slides.length;
+        slides[atual].classList.add("ativo");
+    }
+
+    // Adiciona os eventos nos botões recém-criados
+    document.getElementById("proximo").addEventListener("click", () => mostrarSlide(atual + 1));
+    document.getElementById("anterior").addEventListener("click", () => mostrarSlide(atual - 1));
+
+    // Troca automática a cada 5 segundos
+    setInterval(() => mostrarSlide(atual + 1), 5000);
 }
