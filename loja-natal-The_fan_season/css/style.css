@@ -668,7 +668,7 @@ footer {
 }
 /* QUADRADOS DA HISTÓRIA */
 .historia-section {
-    background-color: var(--branco)
+    background-color: var(--cor-branco)
     padding: 30px;
     border-radius: 15px;
     margin: 30px auto;
@@ -695,7 +695,7 @@ footer {
 
 /* INTRODUÇÃO DA HISTÓRIA */
 .introducao-historia {
-    background-color: var(--branco)
+    background-color: var(--cor-branco);
     padding: 30px;
     border-radius: 15px;
     margin: 30px auto;
@@ -705,7 +705,7 @@ footer {
 
 .introducao-historia p {
     font-family: Arial, sans-serif;
-    color: var(--cinza-claro)
+    color: var(--azul-escuro);
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 15px;
