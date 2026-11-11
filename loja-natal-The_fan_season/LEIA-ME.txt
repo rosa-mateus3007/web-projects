@@ -12,13 +12,17 @@ Repositório (GitHub):
 Vídeo (YouTube): 
 
 RECURSOS DE JAVASCRIPT IMPLEMENTADOS (mínimo de 8):
-1. Slideshow - index.html
-2. Parallax - index.html
-3. Sons - todas as páginas
-4. Cards dinâmicos (50 produtos) - produtos.html
-5. Filtro e busca - produtos.html
-6. 
-8. 
+1. Música de fundo - todas as páginas
+2. Neve Caindo - todas as páginas
+3. Parallax - index.html
+4. Contador regressivo - index.html
+5. Slideshow - index.html
+6. Filtro e busca - produtos.html
+7. Cards dinâmicos (50 produtos) - produtos.html
+8. Carrinho - produtos.html
+9. Quiz interativo - quiz.html
+10. Modal com formulário - contato.html
+
 
 CRÉDITOS (imagens, sons e ícones):
 - Unsplash - autor - link
