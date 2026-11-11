@@ -2,6 +2,7 @@
     --cor-branco: #FFFFFF;
     --cor-cinza-claro: #cccccc;
     --cor-cinza: #D5D5D5;
+    --cor-preto: #000000;
 
     --azul-escuro: #101B35;
     --azul-claro: #263B60;
@@ -106,6 +107,30 @@
     line-height: 1.7;
     text-align: center;
 }
+
+.btn-ver-todos-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+}
+
+.btn-ver-todos {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-ver-todos:hover {
+    background-color: var(--azul-escuro);
+    color: var(--dourado);
+}
+
 /* =========================
    CONTADOR REGRESSIVO
 ========================= */
@@ -240,9 +265,16 @@
    MODAL DE CONTATO
 ========================= */
 
+.btn-contato-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+}
+
 /* BOTÃO ABRIR */
 .btn-contato {
-    background-color: var(--azul-claro);
+    background-color: var(--azul-escuro);
     color: var(--dourado);
     padding: 12px 24px;
     font-size: 16px;
@@ -250,8 +282,6 @@
     border-radius: 25px;
     cursor: pointer;
     transition: 0.3s;
-    display: flex;
-    justify-content: center;
 }
 
 .btn-contato:hover {
@@ -437,8 +467,6 @@
     font-weight: bold;
     cursor: pointer;
 }
-
-
 
 /* CABEÇALHO */
 header {
