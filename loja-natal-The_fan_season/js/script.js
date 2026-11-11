@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     inicializarFiltros();
     configurarBotoesComprar();
+    quiz();
 });
 
 // ==========================================
@@ -336,4 +337,97 @@ function configurarBotoesComprar() {
             adicionarAoCarrinho(idProduto);
         }
     });
+}
+
+// ==========================================
+// FUNÇÃO DO QUIZ (Com verificação interna)
+// ==========================================
+
+function quiz() {
+    // 1. Verifica se o elemento principal do quiz existe na página atual.
+    // Se não existir (por exemplo, na Home ou na Loja), a função para aqui!
+    const quizBox = document.getElementById("quiz-box");
+    if (!quizBox) return;
+
+    // 2. As 3 perguntas e suas 4 alternativas
+    const perguntasQuiz = [
+        {
+            pergunta: "Qual é o seu estilo favorito de decoração?",
+            opcoes: [
+                { texto: "Árvore bem decorada e luzes", categoria: "decoracao" },
+                { texto: "Roupas temáticas e quentinhas", categoria: "roupas" },
+                { texto: "Canecas especiais para a ceia", categoria: "utensilios" },
+                { texto: "Pequenos enfeites colecionáveis", categoria: "enfeites" }
+            ]
+        },
+        {
+            pergunta: "Como você prefere curtir o clima de inverno?",
+            opcoes: [
+                { texto: "Deixando a casa aconchegante", categoria: "decoracao" },
+                { texto: "Usando um suéter confortável", categoria: "roupas" },
+                { texto: "Tomando chocolate quente", categoria: "utensilios" },
+                { texto: "Colecionando itens temáticos", categoria: "enfeites" }
+            ]
+        },
+        {
+            pergunta: "O que você mais gosta nas festas de fim de ano?",
+            opcoes: [
+                { texto: "O ambiente enfeitado", categoria: "decoracao" },
+                { texto: "O estilo das roupas de frio", categoria: "roupas" },
+                { texto: "A mesa posta com carinho", categoria: "utensilios" },
+                { texto: "Os detalhes e lembranças", categoria: "enfeites" }
+            ]
+        }
+    ];
+
+    let perguntaAtual = 0;
+    let pontos = { decoracao: 0, roupas: 0, utensilios: 0, enfeites: 0 };
+
+    // 3. Função interna que exibe a pergunta na tela
+    function mostrarPergunta() {
+        if (perguntaAtual >= perguntasQuiz.length) {
+            mostrarResultado();
+            return;
+        }
+
+        const q = perguntasQuiz[perguntaAtual];
+        document.getElementById("questao-titulo").textContent = q.pergunta;
+        
+        const container = document.getElementById("opcoes-container");
+        container.innerHTML = "";
+
+        q.opcoes.forEach(op => {
+            const btn = document.createElement("button");
+            btn.textContent = op.texto;
+            btn.className = "btn-opcao";
+            
+            btn.onclick = () => {
+                pontos[op.categoria]++;
+                perguntaAtual++;
+                mostrarPergunta();
+            };
+            
+            container.appendChild(btn);
+        });
+    }
+
+    // 4. Função interna que exibe o resultado final
+    function mostrarResultado() {
+        document.getElementById("pergunta-container").style.display = "none";
+        document.getElementById("resultado-container").style.display = "block";
+
+        let melhorCat = Object.keys(pontos).reduce((a, b) => pontos[a] > pontos[b] ? a : b);
+
+        const nomes = {
+            decoracao: "Decoração 🎄",
+            roupas: "Roupas e Estilo 🧥",
+            utensilios: "Utensílios ☕",
+            enfeites: "Enfeites e Colecionáveis 🎁"
+        };
+
+        document.getElementById("resultado-titulo").textContent = nomes[melhorCat];
+    }
+
+    // Inicia o quiz chamando a primeira pergunta
+    mostrarPergunta();
 }

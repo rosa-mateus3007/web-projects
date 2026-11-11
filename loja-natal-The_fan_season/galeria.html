@@ -19,34 +19,33 @@
             <a href="contato.html">Contato</a>
         </nav>
     </header>
-    <main>
+        <!-- Conteúdo Principal da Página do Quiz -->
+    <main class="container-quiz">
+        <h1>🎄 Descubra seu Estilo de Fã!</h1>
+        <p>Responda às perguntas abaixo e descubra qual categoria mais combina com você.</p>
+
+        <!-- Caixa principal do Quiz (É aqui que o JavaScript procura pelo id="quiz-box") -->
+        <div id="quiz-box">
+            
+            <!-- Parte das Perguntas (Visível durante o quiz) -->
+            <div id="pergunta-container">
+                <h3 id="questao-titulo">Carregando pergunta...</h3>
+                <div id="opcoes-container" class="opcoes-grid">
+                    <!-- O JavaScript vai injetar os 4 botões de alternativas aqui dentro -->
+                </div>
+            </div>
+
+            <!-- Parte do Resultado (Fica escondido até o quiz terminar) -->
+            <div id="resultado-container" style="display: none;">
+                <h2>✨ Seu resultado: <span id="resultado-titulo"></span></h2>
+                <p>Com base nas suas respostas, essa é a categoria ideal para você aproveitar no nosso e-commerce!</p>
+                
+                <!-- Botão que leva o usuário direto para a página de produtos -->
+                <a href="produtos.html" class="btn-ver-produtos">Ver Produtos da Categoria</a>
+            </div>
+
+        </div>
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     </main>
