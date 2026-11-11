@@ -340,7 +340,7 @@ function configurarBotoesComprar() {
 }
 
 // ==========================================
-// FUNÇÃO DO QUIZ (Com verificação interna)
+// QUIZ
 // ==========================================
 
 function quiz() {
@@ -420,14 +420,12 @@ function quiz() {
 
         const nomes = {
             decoracao: "Decoração 🎄",
-            roupas: "Roupas e Estilo 🧥",
+            roupas: "Roupas e Estilo 👕",
             utensilios: "Utensílios ☕",
             enfeites: "Enfeites e Colecionáveis 🎁"
         };
 
         document.getElementById("resultado-titulo").textContent = nomes[melhorCat];
     }
-
-    // Inicia o quiz chamando a primeira pergunta
     mostrarPergunta();
 }
