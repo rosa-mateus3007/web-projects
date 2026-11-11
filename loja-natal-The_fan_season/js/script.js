@@ -62,7 +62,6 @@ function abrirModal() {
     const modal = document.querySelector('#modalContato');
     const formContato = document.querySelector('#formContatoModal');
 
-    // Se o botão NÃO existir na página, o código para aqui e vai embora
     if (!btnAbrir) return;  
 
     btnAbrir.addEventListener('click', () => {
@@ -95,7 +94,6 @@ function mostrarCampoOutroAssunto() {
     const campoOutro = document.getElementById('campoOutroAssunto');
     const inputOutro = document.getElementById('modalOutroInput');
 
-    // Se o elemento principal NÃO existir na página atual, o código para aqui sem erro
     if (!selectAssunto) return;
 
     selectAssunto.addEventListener('change', function() {
@@ -142,11 +140,10 @@ function efeitoNeve() {
 // ==========================================
 function contadorRegressivo() {
 
-    // Verifica logo no início se o elemento "dias" existe na página atual
     const elementoDias = document.getElementById("dias");
 
     if (!elementoDias) {
-        return; // Se não estiver na página, para a execução aqui sem erro
+        return; 
     }
 
     function atualizarContador() {
@@ -217,18 +214,15 @@ function inicializarFiltros() {
     const seletorCategoria = document.getElementById("categoria");
     const contador = document.getElementById("contador");
 
-    // Se os elementos de busca não existirem na página, para aqui
     if (!campoBusca && !seletorCategoria) return;
 
     function filtrar() {
-        // Pega o texto digitado e a categoria selecionada (se existirem)
         const texto = campoBusca ? campoBusca.value.toLowerCase() : "";
         const categoria = seletorCategoria ? seletorCategoria.value : "todas";
 
         const resultado = produtos.filter(p => {
             const combinaNome = p.nome.toLowerCase().includes(texto);
             
-            // Verifica se a categoria bate (suportando se for string ou array)
             let combinaCategoria = false;
             if (categoria === "todas") {
                 combinaCategoria = true;
@@ -240,17 +234,13 @@ function inicializarFiltros() {
 
             return combinaNome && combinaCategoria;
         });
-
-        // Atualiza os produtos na tela
         mostrarProdutos(resultado);
 
-        // Atualiza o texto do contador (se o elemento existir no HTML)
         if (contador) {
             contador.textContent = `Mostrando ${resultado.length} de ${produtos.length} produtos`;
         }
     }
 
-    // Adiciona os escutadores de eventos se os elementos existirem
     if (campoBusca) {
         campoBusca.addEventListener("input", filtrar);
     }
@@ -274,7 +264,6 @@ let carrinho = [];
 
 // Função para adicionar um produto ao carrinho (recebe o ID do produto)
 function adicionarAoCarrinho(idProduto) {
-    // Procura o produto na lista global que veio do 'produtos.js'
     const produtoEncontrado = produtos.find(p => p.id === idProduto);
     
     if (!produtoEncontrado) return;
@@ -285,11 +274,8 @@ function adicionarAoCarrinho(idProduto) {
     if (itemExistente) {
         itemExistente.quantidade += 1;
     } else {
-        // Adiciona o produto com quantidade 1
         carrinho.push({ ...produtoEncontrado, quantidade: 1 });
     }
-
-    // Atualiza a exibição do carrinho na tela
     atualizarCarrinho();
     
     console.log("Carrinho atualizado:", carrinho);
@@ -311,7 +297,6 @@ function atualizarCarrinho() {
         contadorCarrinho.textContent = quantidadeTotal;
     }
 
-    // Se a área do carrinho não existir, para aqui
     if (!listaCarrinhoHTML) return;
 
     listaCarrinhoHTML.innerHTML = "";
@@ -336,7 +321,6 @@ function atualizarCarrinho() {
         totalCarrinhoHTML.textContent = formatarPreco(totalGeral);
     }
 }
-
 
 // Função para remover um item do carrinho
 function removerDoCarrinho(idProduto) {
@@ -364,12 +348,11 @@ function abrirModalCarrinho() {
     const modal = document.querySelector('#modal-carrinho');
     const btnFinalizar = document.querySelector('#btn-finalizar');
 
-    // Se o botão do carrinho NÃO existir na página, o código para aqui e vai embora
     if (!btnAbrir) return; 
 
     btnAbrir.addEventListener('click', () => {
         modal.classList.add('ativo');
-        atualizarCarrinho(); // Garante que a lista atualiza ao abrir
+        atualizarCarrinho(); 
     });
 
     btnFechar.addEventListener('click', () => {
@@ -401,12 +384,9 @@ function abrirModalCarrinho() {
 // ==========================================
 
 function quiz() {
-    // 1. Verifica se o elemento principal do quiz existe na página atual.
-    // Se não existir (por exemplo, na Home ou na Loja), a função para aqui!
     const quizBox = document.getElementById("quiz-box");
     if (!quizBox) return;
 
-    // 2. As 3 perguntas e suas 4 alternativas
     const perguntasQuiz = [
         {
             pergunta: "Qual é o seu estilo favorito de decoração?",
@@ -440,7 +420,7 @@ function quiz() {
     let perguntaAtual = 0;
     let pontos = { decoracao: 0, roupas: 0, utensilios: 0, enfeites: 0 };
 
-    // 3. Função interna que exibe a pergunta na tela
+    // exibe a pergunta na tela
     function mostrarPergunta() {
         if (perguntaAtual >= perguntasQuiz.length) {
             mostrarResultado();
@@ -468,7 +448,7 @@ function quiz() {
         });
     }
 
-    // 4. Função interna que exibe o resultado final
+    // Exibe o resultado final
     function mostrarResultado() {
         document.getElementById("pergunta-container").style.display = "none";
         document.getElementById("resultado-container").style.display = "block";
@@ -494,14 +474,11 @@ function slideshow() {
     const container = document.getElementById("slideshow-destaques");
     if (!container) return; 
 
-    // Verifica se a lista global de produtos existe
     if (typeof produtos === 'undefined') return;
 
-    // Filtra apenas os produtos com destaque: true
     const destaques = produtos.filter(item => item.destaque === true);
     if (destaques.length === 0) return;
 
-    // Salva os botões para recolocá-los depois
     const botoesHTML = `
         <button id="anterior" class="btn-slide">&#10094;</button>
         <button id="proximo" class="btn-slide">&#10095;</button>
@@ -509,7 +486,6 @@ function slideshow() {
 
     let htmlSlides = "";
     
-    // ATENÇÃO AQUI: Mudamos de 'produto' para 'item' para evitar confusão com a variável 'produtos'
     destaques.forEach((item, index) => {
         const classeAtiva = index === 0 ? "slide ativo" : "slide";
         
@@ -527,7 +503,6 @@ function slideshow() {
     // Insere os slides junto com os botões no container
     container.innerHTML = htmlSlides + botoesHTML;
 
-    // Lógica de rotação do carrossel
     const slides = container.querySelectorAll(".slide");
     let atual = 0;
 
@@ -537,11 +512,9 @@ function slideshow() {
         slides[atual].classList.add("ativo");
     }
 
-    // Adiciona os eventos nos botões
     document.getElementById("proximo").addEventListener("click", () => mostrarSlide(atual + 1));
     document.getElementById("anterior").addEventListener("click", () => mostrarSlide(atual - 1));
 
-    // Troca automática a cada 5 segundos
     setInterval(() => mostrarSlide(atual + 1), 5000);
 }
 
