@@ -687,7 +687,7 @@ footer {
 /* TEXTOS DOS QUADRADOS */
 .historia-section p {
     font-family: Arial, sans-serif;
-    color: var(--azul-escuro);
+    color: var(--cor-branco);
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 15px;
@@ -705,7 +705,7 @@ footer {
 
 .introducao-historia p {
     font-family: Arial, sans-serif;
-    color: var(--azul-escuro);
+    color: var(--cor-branco);
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 15px;
