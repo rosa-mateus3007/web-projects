@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - The fan season</title>
+    <link rel="icon" href="img/fanicons/arvore_de_natal-favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logotipo da Loja de Natal The fan season" class="logo-header">
+        <button id="btn-musica">Tocar música</button>
+        <button class="menu-hamburguer" id="menu-hamburguer"
+            aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
+
+        <nav class="menu" id="menu">
+            <a href="index.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section class="parallax">
+            <img src="img/banner_paralax/cidade.png"  id="cidade" alt="Cidade de Nova York com o empire state">
+            <img src="img/banner_paralax/lua.png" id="lua" alt="Lua minguante">
+            <img src="img/banner_paralax/papai_noel.png" id="papai_noel" alt="Papai Noel com seu treno de natal voando no céu com renas">
+            <img src="img/banner_paralax/titulo.png" id="titulo" alt="Título 'The fan season'">
+        </section>
+
+        <div class="container-contador">
+            <div class="contador">
+                <h2>CONTAGEM REGRESSIVA PARA O NATAL</h2>
+                <div class="tempo">
+                    <div class="card">
+                        <h3 id="dias">00</h3>
+                        <p>Dias</p>
+                    </div>
+                    <div class="card">
+                        <h3 id="horas">00</h3>
+                        <p>Horas</p>
+                    </div>
+                    <div class="card">
+                        <h3 id="minutos">00</h3>
+                        <p>Minutos</p>
+                    </div>
+                    <div class="card">
+                        <h3 id="segundos">00</h3>
+                        <p>Segundos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <article class="boasvindas">
+            <div class="messagem-boasvindas">
+                <h1>Bem-vindo(a) à The Fan Season!</h1>
+                <p>Mais do que uma loja, 
+                    o ponto de encontro oficial para quem vive e respira a sua paixão.<br>
+                     Aqui, cada detalhe é pensados por fãs e para fãs, reunindo colecionáveis, estilo e exclusividade em um só lugar.<br>
+                      Prepare-se para encontrar o item perfeito que faltava na sua estante ou no seu dia a dia.</p>
+            </div>
+        </article>
+
+        <section class="container-slideshow-destaques">
+            <h2>Produtos em Destaque</h2>
+            <!-- js vai colocar os produtos por esse id -->
+            <div id="slideshow-destaques" class="slideshow-box">
+                <button id="anterior" class="btn-slide">&#10094;</button>
+                <button id="proximo" class="btn-slide">&#10095;</button>
+            </div>
+        </section>
+
+        <div class="btn-ver-todos-container">
+            <form action="produtos.html">
+                <button type="submit" class="btn-ver-todos">Ver Todos os Produtos</button>
+            </form>
+        </div>
+
+    </main>
+    <footer>
+        <div class="container-footer">
+            <div class="footer-img">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Logotipo da Loja de Natal The fan season" class="logo-footer">
+                </a>
+                <p>O natal dos fãs começa aqui!</p>
+            </div>
+
+            <div class="footer-navegacao">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-atendimento">
+                <h4>Atendimento</h4>
+                <ul>
+                    <li>Email: ouvidoria@thefanseason.com</li>
+                    <li>WhatsApp: (18) 30303-1818</li>
+                    <li>Horário: Seg a Sex, 9h às 18h</li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-pagamento">
+                <h4>Pagamento</h4>
+                <ul class="metodos-pagamento">
+                    <li><span>💳</span> Cartão de Crédito</li>
+                    <li><span>⚡</span> Pix (5% de desconto)</li>
+                </ul>
+                <p id="seguranca">🔒 Compra 100% Segura</p>
+            </div>
+             
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 The fan season - Loja de natal fictícia para fins de estudo e aprendizagem.</p>
+            <p>Desenvolvido por Mateus Rosa e Sarah Santos.</p>
+        </div>
+    </footer>
+    <script src="js/produtos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

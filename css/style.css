@@ -1,0 +1,1441 @@
+
+:root {
+    --cor-branco: #FFFFFF;
+    --cor-cinza-claro: #cccccc;
+    --cor-cinza: #D5D5D5;
+    --cor-preto: #000000;
+
+    --azul-escuro: #101B35;
+    --azul-claro: #263B60;
+    --azul-quadrado: #8FA5BA;
+
+    --dourado: #D9B76E;
+}
+
+/* CONFIGURAÇÃO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+
+   body {
+    background: linear-gradient(
+        to bottom,
+        #010832 0%,
+        #10234C 25%,
+        #294D7B 65%,
+        #52769D 100%
+    );
+
+    font-family: Arial, sans-serif;
+   }
+
+.logo-header {
+    width: 50px;
+    height: auto;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+/* =========================
+   PARALLAX
+========================= */
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+/* IMAGENS DO PARALLAX */
+.parallax img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    pointer-events: none;
+    user-select: none;
+}
+#lua {
+    object-fit: contain;
+    object-position: center;
+}
+
+/* CAMADA 1 */
+#cidade {
+    z-index: 1;
+}
+
+/* CAMADA 2 */
+#lua {
+    z-index: 2;
+}
+
+/* CAMADA 3 */
+#papai_noel {
+    z-index: 3;
+}
+
+/* CAMADA 4 */
+#titulo {
+    z-index: 4;
+} 
+/* =========================
+   BOAS-VINDAS
+========================= */
+
+/* BOAS-VINDAS */
+.messagem-boasvindas h1 {
+    font-family: Georgia, serif;
+    color: var(--dourado);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.messagem-boasvindas p {
+    font-family: Arial, sans-serif;
+    color: var(--cor-branco);
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.btn-ver-todos-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+}
+
+.btn-ver-todos {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-ver-todos:hover {
+    background-color: var(--azul-escuro);
+    color: var(--dourado);
+}
+
+/* =========================
+   CONTADOR REGRESSIVO
+========================= */
+
+.container-contador {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 15px;
+    border: 2px solid var(--cor-branco);
+
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+
+    margin: 40px auto;
+}
+
+.container-contador .contador h2 {
+    font-size: 32px;
+    color: var(--dourado);
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.container-contador .contador .tempo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.container-contador .contador .tempo .card {
+    padding: 10px;
+    background-color: var(--azul-escuro);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container-contador .contador .tempo .card h3 {
+    font-size: 45px;
+    color: var(--dourado);
+    padding: 5px;
+    min-width: 80px;
+    font-weight: bold;
+}
+
+.container-contador .contador .tempo .card p {
+    font-size: 16px;
+    padding: 5px;
+    color: var(--cor-branco);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   NEVE
+========================= */
+
+/* Estilo dos flocos de neve */
+.floco-neve {
+    position: fixed;
+    top: -10px;
+    background-color: var(--cor-branco);
+    border-radius: 50%;
+    pointer-events: none; 
+    z-index: 9999; /* Fica acima de tudo, mas sem bloquear nada */
+    animation-name: cairNeve;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Animação de queda de cima para baixo */
+@keyframes cairNeve {
+    0% {
+        transform: translateY(0px) translateX(0px);
+    }
+    50% {
+        transform: translateY(50vh) translateX(15px); 
+    }
+    100% {
+        transform: translateY(105vh) translateX(-15px);
+    }
+}
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.container-produtos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Barra de busca */
+.filtros-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.filtros-container input,
+.filtros-container select {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid var(--azul-claro);
+    border-radius: 8px;
+    outline: none;
+    flex: 1;
+    min-width: 200px;
+}
+
+.contador-produtos {
+    font-size: 0.9rem;
+    color: var(--cor-cinza);
+    margin-bottom: 20px;
+}
+
+/* =========================
+   MODAL DE CONTATO
+========================= */
+
+.btn-contato-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+}
+
+/* BOTÃO ABRIR */
+.btn-contato {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-contato:hover {
+    background-color: var(--azul-claro);
+    color: var(--dourado);
+}
+
+/* FUNDO DO MODAL */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-container.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* CONTEÚDO */
+.modal-conteudo {
+    background-color: var(--azul-escuro);
+    border: 1px solid var(--azul-claro);
+    padding: 30px;
+    border-radius: 12px;
+
+    width: 90%;
+    max-width: 450px;
+
+    position: relative;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* TÍTULO */
+.modal-conteudo h2 {
+    color: var(--dourado);
+    margin-bottom: 10px;
+}
+
+/* DESCRIÇÃO */
+.modal-conteudo p {
+    color: var(--cor-cinza);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* BOTÃO FECHAR */
+.btn-fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    color: var(--dourado);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-fechar:hover {
+    color: var(--cor-branco);
+}
+
+/* CAMPOS DO FORMULÁRIO */
+.form-modal .campo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+/* LABELS */
+.form-modal label {
+    color: var(--dourado);
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+/* INPUTS, SELECT E TEXTAREA */
+.form-modal input,
+.form-modal select,
+.form-modal textarea {
+    width: 100%;
+    padding: 12px;
+
+    background-color: var(--azul-escuro);
+    color: var(--cor-branco);
+
+    border: 1px solid var(--azul-claro);
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+/* FOCO NOS CAMPOS */
+.form-modal input:focus,
+.form-modal select:focus,
+.form-modal textarea:focus {
+    border-color: var(--dourado);
+    box-shadow: 0 0 6px rgba(217, 183, 110, 0.2);
+}
+
+/* PLACEHOLDERS */
+.form-modal input::placeholder,
+.form-modal textarea::placeholder {
+    color: #8995AA;
+}
+
+/* OPÇÕES DO SELECT */
+.form-modal select option {
+    background-color: var(--azul-escuro);
+    color: var(--cor-branco);
+}
+
+/* OUTRO ASSUNTO */
+#campoOutroAssunto {
+    display: none;
+    margin-top: 5px;
+    animation: aparecer 0.3s ease;
+}
+
+/* BOTÃO ENVIAR */
+.btn-enviar {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+
+    background-color: var(--azul-claro);
+    color: var(--dourado);
+
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+}
+
+/* ANIMAÇÃO */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.btn-enviar {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color:var(--azul-claro);
+    color: var(--dourado);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* CABEÇALHO */
+header {
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 50px;
+
+    background-color: var(--azul-escuro);
+
+    position: relative;
+    z-index: 10;
+}
+
+/* LOGOTIPO */
+.logo-header {
+    width: 80px;
+    height: auto;
+}
+
+/* MENU DESKTOP */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* LINKS DO MENU */
+.menu a {
+    color: var(--cor-branco);
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    position: relative;
+    transition: 0.3s;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.menu a:hover {
+    color: var(--dourado);
+}
+
+/* LINHA DOURADA ANIMADA */
+.menu a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var(--dourado);
+
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* BOTÃO HAMBÚRGUER */
+.menu-hamburguer {
+    display: none;
+}
+/* =========================
+   RODAPÉ - FOOTER
+========================= */
+
+footer {
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        var(--azul-claro),
+        var(--azul-escuro)
+    );
+
+    color: var(--cor-branco);
+    padding: 50px 60px 20px;
+}
+
+/* CONTAINER PRINCIPAL */
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 40px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* LOGOTIPO */
+.footer-img {
+    flex: 1;
+}
+
+.footer-img p {
+    color: var(--dourado);
+    font-size: 14px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.logo-footer {
+    width: 80px;
+    height: auto;
+}
+
+/* COLUNAS */
+.footer-navegacao,
+.footer-atendimento,
+.footer-pagamento {
+    flex: 1;
+}
+
+/* TÍTULOS */
+.container-footer h4 {
+    color: var(--dourado);
+    font-size: 18px;
+    margin-bottom: 20px;
+
+    position: relative;
+}
+
+/* DETALHE ABAIXO DOS TÍTULOS */
+.container-footer h4::after {
+    content: "";
+
+    display: block;
+    width: 35px;
+    height: 2px;
+
+    background-color: var(--dourado);
+
+    margin-top: 8px;
+}
+
+/* LISTAS */
+.container-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* ITENS */
+.container-footer li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: var(--cor-cinza);
+}
+
+/* LINKS */
+.container-footer a {
+    color: var(--cor-cinza);
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+/* EFEITO DOS LINKS */
+.container-footer a:hover {
+    color: var(--dourado);
+}
+
+/* MÉTODOS DE PAGAMENTO */
+.metodos-pagamento span {
+    margin-right: 8px;
+    font-size: 17px;
+}
+
+/* SEGURANÇA */
+#seguranca {
+    margin-top: 20px;
+    color: var(--dourado);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* PARTE INFERIOR DO FOOTER */
+.footer-bottom {
+    border-top: 1px solid var(--dourado);
+
+    margin-top: 45px;
+    padding-top: 20px;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: var(--cor-branco);
+    margin-bottom: 10px;
+}
+
+.footer-bottom p:last-child {
+    color: var(--dourado);
+}
+
+
+/* =================================
+ SOBRE NÓS
+================================= */
+
+/* TÍTULO PRINCIPAL */
+#titulo-sobre-nos {
+    font-family: Georgia, serif;
+    color: var(--dourado);
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+
+/* QUADRADOS DA HISTÓRIA */
+.historia-section,
+.introducao-historia {
+    background-color: var(--azul-quadrado);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px auto;
+    max-width: 1100px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* TÍTULOS DA HISTÓRIA */
+.historia-section h3 {
+    font-family: Georgia, serif;
+    color: var(--dourado);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* TEXTOS DA HISTÓRIA */
+.historia-section p,
+.introducao-historia p {
+    font-family: Arial, sans-serif;
+    color: var(--cor-branco);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* TÍTULO DA EQUIPE */
+.apresentacao-da-equipe h2 {
+    font-family: Georgia, serif;
+    color: var(--dourado);
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* CONTAINER DOS INTEGRANTES */
+.membro-equipe {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+/* FOTOS DOS INTEGRANTES */
+.membro-avatar {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid var(--dourado);
+}
+
+.membro-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* INFORMAÇÕES DOS INTEGRANTES */
+.membro-info {
+    flex: 1;
+}
+
+/* NOMES DOS INTEGRANTES */
+.membro-info h3 {
+    font-family: Georgia, serif;
+    color: var(--dourado);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* TEXTOS E DESCRIÇÕES */
+.membro-info p {
+    font-family: Arial, sans-serif;
+    color: var(--cor-branco);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+/* FUNÇÃO DOS INTEGRANTES */
+.membro-info strong {
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+
+/* ÁREA DOS FILTROS */
+.filtros-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 30px 5%;
+    box-sizing: border-box;
+}
+
+/* BARRA DE PESQUISA */
+#busca {
+    width: 60%;
+    max-width: 550px;
+    padding: 14px 20px;
+    border: 2px solid #6a839d;
+    border-radius: 30px;
+    background-color: var(--cor-branco);
+    color: #35495e;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#busca::placeholder {
+    color: #9aa9b8;
+}
+
+#busca:focus {
+    border-color: #35495e;
+    box-shadow: 0 0 8px rgba(106, 131, 157, 0.3);
+}
+
+/* SELETOR DE CATEGORIAS */
+#categoria {
+    width: 230px;
+    padding: 14px 18px;
+    border: 2px solid #6a839d;
+    border-radius: 30px;
+    background-color: var(--cor-branco);
+    color: #35495e;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+#categoria:focus {
+    border-color: #35495e;
+    box-shadow: 0 0 8px rgba(106, 131, 157, 0.3);
+}
+
+/* OPÇÕES DO SELETOR */
+#categoria option {
+    background-color: var(--cor-branco);
+    color: #35495e;
+}
+
+
+.contador-produtos {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: var(--cor-branco);
+    border: 2px solid #6a839d;
+    border-radius: 10px;
+    color: #35495e;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* GRADE DE PRODUTOS */
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* CARD DO PRODUTO */
+.card {
+    background-color: #8fa5ba;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* EFEITO HOVER */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* IMAGEM */
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* NOME DO PRODUTO */
+.card h3 {
+    color: var(--dourado);
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+/* DESCRIÇÃO */
+.card p {
+    color: var(--branco);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* PREÇO */
+.card strong {
+    color: var(--branco);
+    font-size: 19px;
+    margin: 10px 0 15px;
+}
+
+/* BOTÃO CARRINHO */
+.card .btn-carrinho {
+    background-color: #6a839d;
+    color: var(--cor-branco);
+    border: 1px solid var(--dourado);
+    border-radius: 8px;
+    padding: 11px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: auto;
+}
+
+.card .btn-carrinho:hover {
+    background-color: #35495e;
+    color: var(--dourado);
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.container-quiz {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.container-quiz h1 {
+    font-family: Georgia, serif;
+    color: var(--dourado);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container-quiz p {
+    font-family: Arial, sans-serif;
+    color: var(--cor-branco);
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+}
+ 
+/* Caixa do Quiz */
+#quiz-box {
+    background-color: var(--cor-branco);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(106, 131, 157, 0.3);
+    border: 3px solid var(--dourado); 
+    text-align: left;
+    margin-top: 15px;
+}
+
+/* Título da pergunta atual */
+#questao-titulo {
+    font-size: 20px;
+    color: var(--azul-escuro);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Grid que organiza os botões das alternativas */
+.opcoes-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Botões de resposta*/
+.btn-opcao {
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+    border: 2px solid var(--cor-cinza);
+    padding: 15px 20px;
+    border-radius: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+/*Efeito de passar o mouse */
+.btn-opcao:hover {
+    background-color: var(--azul-claro);
+    color: var(--cor-branco);
+    border-color: var(--azul-escuro);
+    transform: translateY(-3px); /* Dá um leve efeito de elevação */
+}
+
+/* TELA DE RESULTADO DO QUIZ*/
+
+#resultado-container {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#resultado-container h2 {
+    color: var(--azul-escuro);
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+#resultado-titulo {
+    color: var(--dourado);
+    font-weight: bold;
+}
+
+#resultado-container p {
+    color: var(--cor-preto);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Botão que leva para a página de produtos */
+.btn-ver-produtos {
+    display: inline-block;
+    background-color: var(--azul-escuro);
+    color: var(--cor-branco);
+    padding: 20px 36px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-ver-produtos:hover {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+}
+
+
+/* SEÇÃO CONTATO */
+#contato {
+    background-color: linear-gradient(
+        to bottom,
+        #010832 0%,
+        #10234C 25%,
+        #294D7B 65%,
+        #52769D 100%
+    );
+    padding: 70px 8%;
+}
+
+/* CONTAINER PRINCIPAL */
+.contato-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+    align-items: stretch;
+}
+
+/* CARDS DE CONTATO */
+.contato-item {
+    background-color: var(--azul-quadrado);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    transition: 0.3s ease;
+}
+
+.contato-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ÍCONES */
+.icone-contato {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* TEXTOS */
+.contato-item p {
+    color: var(--cor-branco);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.contato-item span {
+    color: var(--dourado);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* CARD DO MAPA */
+.contato-mapa {
+    background-color: #6a839d;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TÍTULO DO ENDEREÇO */
+.contato-mapa h3 {
+    color: var(--dourado);
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+/* ENDEREÇO */
+.contato-mapa p {
+    color: var(--cor-branco);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* IMAGEM DO MAPA */
+.mapa-contato {
+    width: 100%;
+    max-width: 450px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--dourado);
+}
+ 
+
+/* BOTÃO DO CARRINHO */
+.btn-icone-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+
+    padding: 12px 20px;
+    border: 2px solid var(--dourado);
+    border-radius: 25px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* CONTADOR DO CARRINHO */
+#contador-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 23px;
+    height: 23px;
+
+    background-color: var(--azul-escuro);
+    color: var(--dourado);
+
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.btn-icone-carrinho:hover {
+    background-color: var(--azul-escuro);
+    color: var(--dourado);
+    border-color: var(--dourado);
+    transform: translateY(-3px);
+}
+
+/* CONTADOR NO HOVER */
+.btn-icone-carrinho:hover #contador-carrinho {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+}
+
+/* ==========================================
+   Slideshow
+========================================== */
+
+.container-slideshow-destaques {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.container-slideshow-destaques h2 {
+    font-family: Georgia, serif;
+    color: var(--dourado);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Caixa principal do slideshow */
+.slideshow-box {
+    position: relative;
+    background-color: var(--cor-cinza-claro);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(16, 27, 53, 0.15);
+    border: 3px solid var(--dourado);
+    overflow: hidden;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cada slide individual */
+.slideshow-box .slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    animation: aparecerSlide 0.8s ease-in-out;
+}
+
+/* O slide ativo aparece na tela */
+.slideshow-box .slide.ativo {
+    display: flex;
+}
+
+/* Animação suave de transição */
+@keyframes aparecerSlide {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Imagem do produto no slide */
+.slideshow-box .slide img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 3px solid var(--cor-cinza);
+}
+
+/* Informações do produto */
+.info-slide h3 {
+    font-size: 22px;
+    color: var(--azul-escuro);
+    margin-bottom: 8px;
+}
+
+.info-slide p {
+    font-size: 18px;
+    color: var(--azul-claro);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Botões de avançar e voltar (Setas) */
+.btn-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--azul-escuro);
+    color: var(--cor-branco);
+    border: none;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.btn-slide:hover {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+    transform: translateY(-50%) scale(1.05);
+}
+
+#anterior {
+    left: 30px;
+}
+
+#proximo {
+    right: 30px;
+}
+
+/* ==========================================
+   MODAL DO CARRINHO
+========================================== */
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-container.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* CONTEÚDO */
+.modal-conteudo {
+    background-color: var(--azul-escuro);
+    border: 1px solid var(--azul-claro);
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* TÍTULO */
+.modal-conteudo h2 {
+    color: var(--dourado);
+    margin-bottom: 10px;
+}
+
+/* DESCRIÇÃO */
+.modal-conteudo p {
+    color: var(--cor-cinza);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* BOTÃO FECHAR */
+.btn-fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--dourado);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-fechar:hover {
+    color: var(--cor-branco);
+}
+
+/* Estilo dos itens dentro da lista do carrinho */
+#itens-carrinho li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+    color: var(--cor-branco);
+    font-size: 14px;
+}
+
+#itens-carrinho li button {
+    background-color: #e74c3c;
+    color: var(--cor-branco);
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================
+   BOTÃO DE MÚSICA
+========================================== */
+
+#btn-musica {
+    background-color: var(--azul-escuro);
+    color: var(--dourado);
+    border: 1px solid var(--azul-claro);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#btn-musica:hover {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+    transform: scale(1.05);
+}

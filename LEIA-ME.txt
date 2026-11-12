@@ -1,0 +1,25 @@
+LOJA: The Fan Season
+SEGMENTO:  Itens Persinalizados (ropas, enfeites, decorações e utensílios)
+TURMA: 1TIB
+
+INTEGRANTES:
+- Mateus Rosa Batista - n° 1
+- Sarah Oliveira dos Santos - n° 2
+
+LINKS:
+Site (GitHub Pages): 
+Repositório (GitHub): 
+Vídeo (YouTube): 
+
+RECURSOS DE JAVASCRIPT IMPLEMENTADOS (mínimo de 8):
+1. Música de fundo - todas as páginas
+2. Neve Caindo - todas as páginas
+3. Menu Hambúrguer - todas as páginas
+4. Parallax - index.html
+5. Contador regressivo - index.html
+6. Slideshow - index.html
+7. Filtro e busca - produtos.html
+8. Cards dinâmicos (50 produtos) - produtos.html
+9. Carrinho - produtos.html
+10. Quiz interativo - quiz.html
+11. Modal com formulário - contato.html
