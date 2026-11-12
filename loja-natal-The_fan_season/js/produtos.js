@@ -411,7 +411,7 @@ const produtos = [
         categoria: ["Taylor Swift", "enfeite"],
         preco: 98.00,
         imagem: "img/produtos/",
-        descricao: "",
+        descricao: "Estrela de metal dourado com pontas coloridas e iniciais TS no centro. Perfeita para ser colocada no topo da sua árvore de Natal.",
         destaque: false
     },
     {
