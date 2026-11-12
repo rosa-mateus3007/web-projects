@@ -1060,7 +1060,13 @@ footer {
 
 /* SEÇÃO CONTATO */
 #contato {
-    background-color: var(--azul-escuro);
+    background-color: linear-gradient(
+        to bottom,
+        #010832 0%,
+        #10234C 25%,
+        #294D7B 65%,
+        #52769D 100%
+    );
     padding: 70px 8%;
 }
 
