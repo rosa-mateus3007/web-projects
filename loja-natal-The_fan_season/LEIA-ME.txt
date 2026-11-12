@@ -23,8 +23,3 @@ RECURSOS DE JAVASCRIPT IMPLEMENTADOS (mínimo de 8):
 9. Carrinho - produtos.html
 10. Quiz interativo - quiz.html
 11. Modal com formulário - contato.html
-
-
-CRÉDITOS (imagens, sons e ícones):
-- Unsplash - autor - link
-- Pixabay - autor - link
