@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     quiz();
     slideshow();
     musica();
+    menuHamburguer();
 });
 
 // ==========================================
@@ -548,43 +549,44 @@ function musica() {
    MENU HAMBÚRGUER
 ========================================== */
 
-const botaoMenu = document.getElementById('menu-hamburguer');
-const menu = document.getElementById('menu');
+function menuHamburguer() {
+    const botaoMenu = document.getElementById('menu-hamburguer');
+    const menu = document.getElementById('menu');
 
-botaoMenu.addEventListener('click', () => {
+    botaoMenu.addEventListener('click', () => {
 
-    // Abre ou fecha o menu
-    menu.classList.toggle('ativo');
+        // Abre ou fecha o menu
+        menu.classList.toggle('ativo');
 
-    // Anima o botão
-    botaoMenu.classList.toggle('ativo');
+        // Anima o botão
+        botaoMenu.classList.toggle('ativo');
 
-    // Atualiza o estado de acessibilidade
-    const menuAberto = menu.classList.contains('ativo');
+        // Atualiza o estado de acessibilidade
+        const menuAberto = menu.classList.contains('ativo');
 
-    botaoMenu.setAttribute('aria-expanded', menuAberto);
+        botaoMenu.setAttribute('aria-expanded', menuAberto);
 
-    botaoMenu.setAttribute(
-        'aria-label',
-        menuAberto ? 'Fechar menu' : 'Abrir menu'
-    );
-
-});
-
-// Fecha o menu ao clicar em um dos links
-const linksMenu = menu.querySelectorAll('a');
-
-linksMenu.forEach(link => {
-
-    link.addEventListener('click', () => {
-
-        menu.classList.remove('ativo');
-        botaoMenu.classList.remove('ativo');
-
-        botaoMenu.setAttribute('aria-expanded', 'false');
-        botaoMenu.setAttribute('aria-label', 'Abrir menu');
+        botaoMenu.setAttribute(
+            'aria-label',
+            menuAberto ? 'Fechar menu' : 'Abrir menu'
+        );
 
     });
 
-});
+    // Fecha o menu ao clicar em um dos links
+    const linksMenu = menu.querySelectorAll('a');
 
+    linksMenu.forEach(link => {
+
+        link.addEventListener('click', () => {
+
+            menu.classList.remove('ativo');
+            botaoMenu.classList.remove('ativo');
+
+            botaoMenu.setAttribute('aria-expanded', 'false');
+            botaoMenu.setAttribute('aria-label', 'Abrir menu');
+
+        });
+
+    });
+}
