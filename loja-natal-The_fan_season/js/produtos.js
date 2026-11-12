@@ -15,7 +15,7 @@ const produtos = [
         preco: 95.90,
         imagem: "img/produtos/ttpd-snow-globe.jpeg",
         descricao: "Caixinha de música em formato de globo de neve, que toca a música 'Fortnight'. Ideal para decoração e presente.",
-        destaque: false
+        destaque: true
     },
     {
         id: 3,
@@ -439,7 +439,7 @@ const produtos = [
         preco: 60.00,
         imagem: "img/produtos/",
         descricao: "Caneca de cerâmica branca com estampa colorida do cantor segurando pisca-pisca e a frase temática customizável. Um item indispensável para aquecer suas bebidas favoritas nas noites frias de dezembro.",
-        destaque: false
+        destaque: true
     },
     {
         id: 50,
