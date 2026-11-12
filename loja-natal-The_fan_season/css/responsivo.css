@@ -184,10 +184,41 @@ body {
     }
 
     /* PARALLAX */
-    .parallax {
-        height: 75vh;
-        min-height: 450px;
-    }
+.parallax {
+    height: 75vh;
+    min-height: 450px;
+    max-height: 650px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.parallax img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* LUA */
+#lua {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* TÍTULO */
+#titulo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* CIDADE E PAPAI NOEL */
+#cidade,
+#papai_noel {
+    object-position: center;
+}
 
     /* CONTADOR */
     .container-contador {
@@ -297,11 +328,27 @@ body {
         width: 58px;
     }
 
-    /* PARALLAX */
-    .parallax {
-        height: 65vh;
-        min-height: 380px;
-    }
+   /* PARALLAX */
+.parallax {
+    height: 65vh;
+    min-height: 380px;
+    max-height: 550px;
+}
+
+/* LUA */
+#lua {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* TÍTULO */
+#titulo {
+    width: 95%;
+    height: 100%;
+    left: 2.5%;
+    object-fit: contain;
+}
 
     /* CONTADOR */
     .container-contador {
