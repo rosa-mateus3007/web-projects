@@ -149,7 +149,7 @@ const produtos = [
         nome: "A nonsense Christmas - snow glob",
         categoria: ["Sabrina Carpenter", "decoracao"],
         preco: 85.90,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/globo-de-neve-sabrina-carpenter.png",
         descricao: "globo de neve decorativo inspirado em 'A nonsense Christmas' Sabrina Carpenter.",
         destaque: false
     },
@@ -158,7 +158,7 @@ const produtos = [
         nome: "Harry Styles Christmas stocking ",
         categoria: ["Harry Styles", "decoracao"],
         preco: 50.80,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/harry-styles-christmas-stocking.png",
         descricao: "Meia Natalina inspirado no Harry Styles com tecido de pelúcia, vermelho e branco.",
         destaque: false
     },
@@ -167,7 +167,7 @@ const produtos = [
         nome: "Harry styles - snow globe ",
         categoria: ["Harry Styles", "decoracao"],
         preco: 89.90,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/snow-globe-harry-styles.png",
         descricao: "Globo de neve decorativo inspirado no Harry styles, para quem quer dar aquele tom de personalidade ao seu natal.",
         destaque: false
     },
@@ -176,7 +176,7 @@ const produtos = [
         nome: "GUTS - snow globe ",
         categoria: ["Olivia Rodrigo", "decoracao"],
         preco: 89.90,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/guts-snow-globe.png",
         descricao: "Globo de neve decorativo, inspirado no álbum GUTS da Olívia Rodrigo.",
         destaque: false
     },
@@ -185,7 +185,7 @@ const produtos = [
         nome: "Kit de enfeite natalino - short 'n sweet.",
         categoria: ["Sabrina Carpenter", "enfeite"],
         preco: 64.80,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/kit-de-enfeite-natalino-short-sweet.png",
         descricao: "Kit de bolinhas para árvore de natal personalizada short 'n sweet Sabrina carpenter (6 unidades).",
         destaque: false
     },
@@ -194,7 +194,7 @@ const produtos = [
         nome: "Lover's house - calendário do advento ",
         categoria: ["Taylor Swift", "decoracao"],
         preco: 159.90, 
-        imagem: "img/produtos/",
+        imagem: "img/produtos/lover-calendario-advento.png",
         descricao: "Calendário do advento personalizado do álbum lover da Taylor Swift.",
         destaque: false
     },
@@ -203,7 +203,7 @@ const produtos = [
         nome: "Kit de enfeite natalino - sour",
         categoria: ["Olivia Rodrigo", "enfeite"],
         preco: 64.80,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/kit-de-enfeite-natalino-sour.png",
         descricao: "Kit de bolinhas para árvore de natal personalizada Sour da Olívia Rodrigo ( 6 unidades).",
         destaque: false
     },
@@ -212,7 +212,7 @@ const produtos = [
         nome: "Expresso - calendário do advento",
         categoria: ["Sabrina Carpenter", "decoracao"],
         preco: 225.00,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/expresso-calendario-advento.jpeg",
         descricao: "Calendário do advento personalizado Sabrina carpenter com 24 dias.",
         destaque: false
     },
@@ -221,7 +221,7 @@ const produtos = [
         nome: "Sour - calendário do advento",
         categoria: ["Olivia Rodrigo", "decoracao"],
         preco: 240.00,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/sour-calendario-advento.jpeg",
         descricao: "Calendário do advento em formato de borboleta personalizado olivia Rodrigo com 24 dias.",
         destaque: false
     },
@@ -230,7 +230,7 @@ const produtos = [
         nome: "Harry Sytles Christmas - calendário do advento",
         categoria: ["Harry Styles", "decoracao"],
         preco: 225.00,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/harry-styles-calendario-advento.jpeg",
         descricao: "Calendário do advento personalizado Harry Styles 24 dias.",
         destaque: false
     },
@@ -238,8 +238,8 @@ const produtos = [
         id: 27,
         nome: "Bola de Natal Personalizada Harry Styles",
         categoria: ["Harry Styles", "enfeite"],
-        preco: 45.00,
-        imagem: "img/produtos/",
+        preco: 80.00,
+        imagem: "img/produtos/bola-natal-harry-styles.jpeg",
         descricao: "Perfeita para ser colocada no topo ou pendurada nos galhos da sua árvore de Natal, esta bola de vidro com o Harry Styles traz todo o charme e o brilho que sua decoração natalina precisa.",
         destaque: false
     },
@@ -248,7 +248,7 @@ const produtos = [
         nome: "Meia de natal da Sabrina Carpenter",
         categoria: ["Sabrina Carpenter", "enfeite"],
         preco: 59.90,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/meia-natal-sabrina-carpenter.jpeg",
         descricao: "Perfeita para pendurar na lareira ou na cabeceira da cama na noite de Natal, esta meia fofinha da Sabrina Carpenter cheia de brilho é ideal para receber os presentes do Papai Noel.",
         destaque: false
     },
@@ -257,7 +257,7 @@ const produtos = [
         nome: "Lightstick Estrela Olivia Rodrigo",
         categoria: ["Olivia Rodrigo", "decoracao"],
         preco: 120.00,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/lightstick-olivia-rodrigo.jpeg",
         descricao: "Perfeito para iluminar as comemorações e trazer a energia de um show para a sua noite de Natal, este lightstick em formato de estrela da Olivia Rodrigo vai dar um toque super divertido à sua árvore e às festas.",
         destaque: false
     },
@@ -266,7 +266,7 @@ const produtos = [
         nome: "Bola de Natal The Eras Tour",
         categoria: ["Taylor Swift", "enfeite"],
         preco: 45.00,
-        imagem: "img/produtos/",
+        imagem: "img/produtos/bola-natal-taylor-swift.jpeg",
         descricao: "Esfera de vidro transparente com a inscrição The Eras Tour e recheada com pulseiras da amizade coloridas. Perfeita para dar um toque especial à árvore de Natal.",
         destaque: false
     },
